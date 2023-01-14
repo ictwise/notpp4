@@ -19,7 +19,7 @@ def bag_contents(request):
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
-    })
+        })
 
     grand_total = total
 
@@ -31,3 +31,4 @@ def bag_contents(request):
     }
 
     return context
+    
