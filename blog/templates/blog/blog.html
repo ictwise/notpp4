@@ -14,12 +14,14 @@
     <div class="container-fluid">
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
+                <div>
                     <h2>Post Blog Blog</h2>
+                    
                     <ul>
-                    {% for post in object_list %}
-                        <li>{{post.title}} - - {{post.author}} <br/>
-                            {{post.body}} </li><br/>
+                    {% for post in posts %}
+                    
+                    <li>{{post.title}} - - {{post.author}} <br/>
+                        {{post.body}} </li><br/>
                     {% endfor%}
                     </ul>
                     <h2>Post Blog Blog</h2>
@@ -28,3 +30,4 @@
         </div>
     </div>
 {% endblock %}
+
