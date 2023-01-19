@@ -8,4 +8,4 @@ from .models import Post
 
 class BlogView(ListView):
     model = Post
-    template_name = 'blog.html'
+    template_name = 'blog/blog.html'
