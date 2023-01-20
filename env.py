@@ -4,3 +4,4 @@ os.environ["STRIPE_SECRET_KEY"] = "sk_test_51MMIerG8VXdhRAoCoIfWaqIwUebRAqdQmjKs
 os.environ["SECRET_KEY"] = "mehtni6-n1#q7^1gkf-=!e)caamrv8kyf5_f4t_9dvazixlh+*"
 os.environ["STRIPE_WH_SECRET"] = "whsec_MkzV0UlyJpEZfDab1f6yemBkg88CLnen"
 os.environ["DEVELOPMENT"] = "True"
+os.environ["DATABASE_URL"] = "postgres://ndozxvzx:kNjUpsEWXN0doPjp7Lu1b4OZPQnSa6-1@mel.db.elephantsql.com/ndozxvzx"

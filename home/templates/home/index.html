@@ -12,14 +12,72 @@
 {% block content %}
     <div class="container h-100">
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-white">
-                    Bike repairs that don’t cost the earth
+            <div class="col-7 col-md-6 my-auto hero-text">
+                <h1 class="display-4 main-page-logo text-white">
+                    EcoBikeTech
                 </h1>
                 <div class="my-5">
                     <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                        <a href="{% url 'products' %}"
+                            class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
                     </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid text-black bg-light" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center about-header">
+                    <h2 class="about-title">
+                        Servicing to suit all budgets
+                    </h2>
+                    <hr class="mt-4">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 col-lg-6 about-image">
+                    <img class="home-img img-fluid" src="media/tool.jpg" alt="Multi tool">
+                </div>
+                <div class="col-md-12 col-lg-6 about-content align-self-center mt-3">
+                    <div class="about-text text-center my-auto">
+                        <p class="lead fade-in">
+                            From full servicing packages to ad-hoc repairs and adjustments, we aim to make bike maintenance affordable and environmentally responsible. 
+                        </p>
+    
+                        <p class="lead fade-in">
+                            Learn more about our full list of services below. 
+    
+                        <p class="lead fade-in">
+                            Can’t find what you’re looking for? Get in touch and we’ll be happy to discuss your requirements and any available options.
+                        </p>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center about-header">
+                    <h2 class="about-title mt-4">
+                        Need a new chain? New brake pads? Or perhaps some lights to fit?                    </h2>
+                    <hr class="mt-4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <p class="lead fade-in mt-3">
+                        We offer a full range of repair and upgrade options, so you can pick and choose what you need us to do.                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-2">
+                    <img class="img-fluid mb-2" src="{% static 'images/bespoke-1.png' %}" alt="">
+                </div>
+                <div class="col-lg-4 col-md-12 mb-2">
+                    <img class="img-fluid mb-2" src="{% static 'images/bespoke-3.png' %}" alt="">
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <img class="img-fluid mb-2" src="{% static 'images/bespoke-2.png' %}" alt="">
                 </div>
             </div>
         </div>

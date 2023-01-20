@@ -129,7 +129,7 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-    print("Connected to Local DB")
+    print("Connected to Remote DB")
 else:
     DATABASES = {
         'default': {
@@ -137,7 +137,7 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-    print("Connected to Remote DB")
+    print("Connected to Local DB")
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
