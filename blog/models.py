@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 # Create your models here.
 
 """
@@ -18,6 +19,9 @@ class Post(models.Model):
     def __str__(self):
         return self.title + ' | ' + str(self.author)
 
+    def get_absolute_url(self):
+        return reverse('blog')
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
@@ -27,3 +31,5 @@ class Comment(models.Model):
 
     def __str__(self):
         return '%s - %s' % (self.post.title, self.name)
+
+

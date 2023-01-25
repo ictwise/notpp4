@@ -23,7 +23,8 @@
       <h2 class="p-4 p-md-5 mb-4 text-white rounded bg-dark text-center">{{ object.title }}</h2>
       <p class="article-content">{{ object.body }}</p>
       <p class="mr-2 text-right">{{ object.post_date|date:"F d, Y" }}</p>
-    </div>
+
+   
   </article>
 
   <div class="container">
@@ -43,8 +44,13 @@
       <br/>
     {% endfor %}
 {%endif %}
-
-<a href=""> Add Comment</a>
+<small>
+  <a class="mr-2 text-right" href="{% url 'blog' %}">Back to Posts</a>     
+</small>
+</br>
+<small class="mr-2 text-right" >
+  <a href=""> Add Comment</a>
+</small>
 </div>
 <br/>
 {% if is_paginated %}
@@ -68,5 +74,6 @@
 {% endif %}
 
 {% endif %}
+
 
 {% endblock %}
