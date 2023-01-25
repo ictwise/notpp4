@@ -1,14 +1,21 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.views.generic import ListView, DetailView
 from .models import Post
 
 from .forms import CommentForm
 
 
-def BlogView(request):
-    context = {
-        'posts': Post.objects.all()
-    }
-    return render(request, 'blog/blog.html', context)
+class PostListView(ListView):
+    model = Post
+    template_name = 'blog/blog.html'  # <app>/<model>_<viewtype>.html
+    context_object_name = 'posts'
+    ordering = ['-post_date']
+
+class PostDetailView(DetailView):
+    model = Post
+    
+
+
 
 
 def add_comment(request):
