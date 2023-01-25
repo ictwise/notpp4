@@ -11,11 +11,9 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['-post_date']
 
+
 class PostDetailView(DetailView):
     model = Post
-    
-
-
 
 
 def add_comment(request):
