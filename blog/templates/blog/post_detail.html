@@ -30,9 +30,12 @@
 
   <div class="container">
   <h2>Comments...</h2>
-
+  <small class="mr-2 text-right" >
+    <a href="{% url 'add_comment' post.pk %}"> Add Comment</a>
+  </small>
+  <hr>
   {% if not post.comments.all %}
-    <p> No comments yet </p>
+    <p> No comments yet <a href=""> Add Comment</a></p>
   {% else %}
     {% for comment in post.comments.all %}
       <strong>
@@ -42,16 +45,16 @@
       <br/>
       {{ comment.body }}
       <br/>
+      <hr>
       <br/>
     {% endfor %}
 {%endif %}
+
+
 <small>
   <a class="mr-2 text-right" href="{% url 'blog' %}">Back to Posts</a>     
 </small>
-</br>
-<small class="mr-2 text-right" >
-  <a href=""> Add Comment</a>
-</small>
+
 </div>
 <br/>
 {% if is_paginated %}
@@ -60,6 +63,8 @@
   <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
   <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
 {% endif %}
+<br/>
+
 
 {% for num in page_obj.paginator.page_range %}
 {% if page_obj.number == num %}

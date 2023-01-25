@@ -27,11 +27,11 @@
     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
       <div class="card h-100 border-0">
           {% if post.image %}
-          <a href="{% url 'post-detail' post.id %}">
+          <a href="{% url 'post-detail' post.pk %}">
               <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
           </a>
           {% else %}
-          <a href="{% url 'post-detail' post.id %}">
+          <a href="{% url 'post-detail' post.pk %}">
               <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
           </a>
           {% endif %}
@@ -44,7 +44,7 @@
                       <p class="mb-0">{{ post.author }}</p>
                       <p class="lead mb-0 text-left font-weight-bold">{{ post.post_date }}</p>
                       <small class="ml-3">
-                        <a href="{% url 'post-detail' post.id %}">Read more</a> | 
+                        <a href="{% url 'post-detail' post.pk %}">Read more</a> | 
                         
                     </small>
  

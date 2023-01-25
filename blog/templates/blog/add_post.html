@@ -4,7 +4,7 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col">xxxx</div>
+            <div class="col"></div>
         </div>
     </div>
 {% endblock %}
@@ -22,7 +22,7 @@
       <form method="POST">
         {% csrf_token %}
         {{ form | crispy }}
-      <button class="btn btn secondary">Post</button>
+      <button class="btn btn-outline-light rounded-0">Post</button>
       </form>
       
 {% endblock %}
