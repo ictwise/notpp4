@@ -11,53 +11,54 @@
 
 
 {% block content %}
-<div class="overlay"></div>
+    <div class="overlay"></div>
+    <div class="container-fluid">
 
-  <article class="container">
-   <div class="text-center max-width: 80%">
-    <img class="img-fluid" src="{{ post.post_image.url }}" alt="{{ post.title }}">
-  </div>
-    <div class="col-md-12 px-0 ">
-      <div class="article-metadata">
-      <span><p> Author</p><h3 class="mr-2 text-success"> {{ object.author }}</h3></span>
-        
-      </div>
-      <h2 class="p-4 p-md-5 mb-4 text-white rounded bg-dark text-center">{{ object.title }}</h2>
-      <p class="article-content">{{ object.body }}</p>
-      <p class="mr-2 text-right">{{ object.post_date|date:"F d, Y" }}</p>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container my-1">
+                      <img class="img-fluid" src="{{ post.post_image.url }}" alt="{{ post.title }}">
+                </div>
+            </div>
+  
+            <div class="col-12 col-md-6 col-lg-4">
+                <h2 class="p-4 p-md-5 mb-4 text-white rounded bg-dark text-center">{{ object.title }}</h2>
+                <br/>
+                <p class="article-content">{{ object.body }}</p>
+                <p class="mr-2 text-right">{{ object.post_date|date:"F d, Y" }}</p>
+            </div>
+            
+            
 
-   
-  </article>
-<br\>
-
-  <div class="container">
-  <h2>Comments...</h2>
-  <small class="mr-2 text-right" >
-    <a href="{% url 'add_comment' post.pk %}"> Add Comment</a>
-  </small>
-  <hr>
-  {% if not post.comments.all %}
-    <p> No comments yet <a href=""> Add Comment</a></p>
-  {% else %}
-    {% for comment in post.comments.all %}
-      <strong>
-        {{ comment.name }} - 
-        {{ comment.date_added }}
-      </strong>
-      <br/>
-      {{ comment.body }}
-      <br/>
-      <hr>
-      <br/>
-    {% endfor %}
-{%endif %}
+            <div class="container">
+              <h2>Comments...</h2>
+                <small class="mr-2 text-right" >
+                    <a href="{% url 'add_comment' post.pk %}"> Add Comment</a>
+                </small>
+            <hr>
+            {% if not post.comments.all %}
+              <p> No comments yet <a href="{% url 'add_comment' post.pk %}"> Add Comment</a></p>
+            {% else %}
+                {% for comment in post.comments.all %}
+                  <strong>
+                    {{ comment.name }} - 
+                    {{ comment.date_added }}
+                  </strong>
+                  <br/>
+                  {{ comment.body }}
+                  <br/>
+                  <hr>
+                  <br/>
+                {% endfor %}
+            {%endif %}
 
 
-<small>
-  <a class="mr-2 text-right" href="{% url 'blog' %}">Back to Posts</a>     
-</small>
+              <small>
+                <a class="mr-2 text-right" href="{% url 'blog' %}">Back to Posts</a>     
+              </small>
+            </div>
 
-</div>
+    </div>
 <br/>
 {% if is_paginated %}
 

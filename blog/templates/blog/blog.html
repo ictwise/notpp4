@@ -15,7 +15,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col text-center mt-3">
-          <h2 class="logo-font">Posts</h2>
+          <h3 class="logo-font">Posts Written by our head mechanic</h3> <small> Sian Jones</small>
           <hr class="w-50 mb-1">
       </div>
   </div>
@@ -35,13 +35,9 @@
           <div class="card-footer bg-white pt-0 border-0 text-left">
               <div class="row">
                   <div class="col">
-                      <p class="mb-0">{{ post.author }}</p>
                       <p class="lead mb-0 text-left font-weight-bold">{{ post.post_date }}</p>
-                      <small class="ml-3">
-                        <a href="{% url 'post-detail' post.pk %}">Read more</a> | 
-                        
-                    </small>
- 
+                      <p class=" mb-0 text-left font-weight-light"> <a href="{% url 'post-detail' post.pk %}">Read more</a> </p>
+
                   </div>
               </div>
           </div>
