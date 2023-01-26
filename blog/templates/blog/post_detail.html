@@ -12,9 +12,11 @@
 
 {% block content %}
 <div class="overlay"></div>
-  
+
   <article class="container">
-    
+   
+    <img class="card-img-top img-fluid" src="{{ post.post_image.url }}" alt="{{ post.title }}">
+
     <div class="col-md-12 px-0 ">
       <div class="article-metadata">
       <span><p> Author</p><h3 class="mr-2 text-success"> {{ object.author }}</h3></span>
