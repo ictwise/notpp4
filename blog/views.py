@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Post, Comment
 from django.urls import reverse_lazy, reverse
+from .forms import PostForm, CommentForm
 
 
 class PostListView(ListView):
@@ -24,9 +25,9 @@ class AddPostView(CreateView):
 
 class AddCommentView(CreateView):
     model = Comment
+    form_class = CommentForm
     template_name = 'blog/add_comment.html'
-    fields = '__all__'
-
+    
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
 

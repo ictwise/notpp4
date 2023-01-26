@@ -21,8 +21,9 @@
 
       <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form | crispy }}
-      <button class="btn btn-outline-light rounded-0">Post</button>
+        {{ form.media }}
+        {{ form.as_p }}
+      <button class="btn btn-secondary">Save Post</button>
       </form>
       
 {% endblock %}

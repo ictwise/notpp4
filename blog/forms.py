@@ -5,8 +5,8 @@ from .models import Post,  Comment
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'title_tag', 'author', 'category',
-                  'body', 'snippet', 'header_image')
+        fields = ('title', 'author', 
+                  'body', 'post_image')
 
         widgets = {
             'title': forms.TextInput(attrs={
@@ -26,16 +26,12 @@ class PostForm(forms.ModelForm):
                 'id': 'user_identifier',
                 'type': 'hidden'
                 }),
-            'category': forms.Select(choices=choice_list, attrs={
-                'class': 'form-control'
-                }),
+            
             'body': forms.Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Type Your Post'
                 }),
-            'snippet': forms.Textarea(attrs={
-                'class': 'form-control'
-                }),
+           
         }
 
 
