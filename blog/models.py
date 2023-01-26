@@ -14,7 +14,7 @@ class Post(models.Model):
     body = models.TextField()
     post_date = models.DateField(auto_now=True)
     post_image_url = models.URLField(max_length=1024, null=True, blank=True)
-    post_image = models.ImageField(null=True, blank=True)
+    post_image = models.ImageField(null=True, blank=True, upload_to="media/")
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
