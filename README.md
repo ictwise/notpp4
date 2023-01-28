@@ -14,7 +14,7 @@
 
 # 1. Project purpose and introduction
 
-The project was designed to showcase advanced coding abilities as part of the Code Institute Fullstack Web Developer Course. It mainly utilizes HTML, CSS, JavaScript, Python + Django, with Bootstrap as an additional framework. Payments are handled through Stripe, and data is stored in a Heroku Postgres relational database. The goal of the project is to create a full-featured e-commerce application that allows users to view products, add them to their cart, make secure purchases, leave reviews, create a wishlist, store personal information for orders, and receive email consultations. Additionally, store management can easily manipulate the products database by adding, editing, and deleting items.
+The project was designed to showcase advanced coding abilities as part of the Code Institute Fullstack Web Developer Course. It mainly utilizes HTML, CSS, JavaScript, Python + Django, with Bootstrap as an additional framework. Payments are handled through Stripe, and data is stored in a Heroku Postgres relational database. The goal of the project is to create a full-featured e-commerce application that allows users to view products, add them to their cart and make secure purchases, 
 
 # EcoBikeTech
 
@@ -56,7 +56,7 @@ The potential users of this application are cyclists of all levels and types who
 - As a shopper, I wish to be able to easily enter my payment information, so that I can check out quickly and with no hassles
 - As a shopper, I wish to be able to feel that my personal and payment information is safe, and secure, so that I can confidently provide the needed information to make a purchase
 - As a shopper, I wish to be able to view an order confirmation after checkout, so that I can verify that I have not made any mistakes in my order
-- As a shopper, I wish to be able to receive an email confirmation after checking out, so that I can keep the confirmation of what I have purchased for my records
+
 
 > Site User Stories 
 
@@ -136,7 +136,7 @@ A website with different separate content pages and the possibility to navigate 
     - My account with dropdown for log in, register, log out, profile, admin links
     - Wishlist for storing favorites products 
     - Shopping bag and further checkout page for purchasing products
-- Footer – a footer with social media icons, email, disclaimer, and copyright
+
 
 [**Database:**]()
 
@@ -292,32 +292,11 @@ The final result of this project is a full-stack, front-end and back-end web app
 
 # 6. Project barriers and solutions
 
-- After inserting the home page index.html into the code validator error has been found, and fixed by simply removing `<br>` tags and adding `d-block` classes for the `<li></li>` tags instead, just to display all elements in separate lines inside card body.
+At some point my env.py must have been pushe to git. I checked and it was listed in .gitignore but it was definately being tracked in git. My tutor helped me clear the cache so it no longer saved to the git history, I then changed all the secret keys and passwords before pushing to git and then double checked that it was no longer being saved. This was a major error, thankfully caught in time and a great learning opportunity. This is somethin I will be extra vigallent to in the future.
 
-<img src="docs/pictures/brtag_error.jpg" style="margin: 0;">
 
-- After inserting code into the code validator another error has been found, this time about a duplicate id at the navigation bar, while opening a page both navigations for mobile view and for desktop view will load as one template,  and only one id is allowed in that case, because after convention it has to be unique, it was repeated after found in base.html so I changed id="user-options" and its label, for an id="user-options-mobile" in mobile-top-header.html template to make that work.
 
-<img src="docs/pictures/dblid_error.jpg" style="margin: 0;">
-
-- Problems occurred with the middle page hanging footer when displaying separate sites with very little content, like an empty wishlist, or empty bag, or template to sign in or log out. I tried several solutions investigated on pages with CSS tricks and stack overflow, none was perfect in that matter. After I spoke with my Mentor during one of the sessions, I find out that the simplest solution would be to wrap a whole content in base.html in a `div and add a class="content"`, and then refer to it in CSS by using `.content` selector with property `min-height` and its value `100vh`. That worked for this case.
-
-<img src="docs/pictures/footer_middle.jpg" style="margin: 0;">
-
-- During the deployment application to the hosting platform, when I was trying to connect the database to Heroku Postgres, after trying to show migrations, an operational error occurred, after a recommendation in the tutorial to fix this bug I ran the following command in terminal: `unset PGHOSTADDR`, and that worked.
-
-<img src="docs/pictures/operational_error.jpg" style="margin: 0;">
-
-- Right after, while trying to temporarily disable collect static so that Heroku will not collect them when the app is deployed by running command `heroku config:set DISABLE_COLLECTSTATIC=1`, I got an 'Error: Missing required flag -a, --ap APP' info in a terminal which says that 'Error: EACCES: permission denied, open...error.log', so after following instructions provided in terminal, I had to repeat action by using command `heroku config:set DISABLE_COLLECTSTATIC=1 --app easy-skincare`, so that returned success.
-
-- While final manual testing for code validation was made another bug to fix occurred, like on the page for Product Management where Admin can add the product to the store database, it was about using double id while one unique id is permitted per site, so simple solution was used to remove id from input tag for the select image field. Another problem showed about using `<strong></strong>` element as a parent of `<p></p>` tag, so I fixed that as well to pass HTML validation for a template. 
-
-<img src="docs/pictures/strong_error.jpg" style="margin: 0;">
-
-- On the 'Checkout' page also bug occurred while testing, I took away the 'for' attribute for the 'label' tag since it was not matching 'id' in this check form to save data and not passing validation. 
-
-- Because of the time issue, I am kind of force to leave another issue as an unresolved bug, on the 'Shopping Bag' page, during the validation another error occurred. While loading data for desktop view and medium and small devices 'id' used to decrement and increment numerous items in the shopping bag was causing a problem after refactoring a whole page. On a large screen did not work as expected allowing a user to make a value under 1 which could cause a problem when updating shopping bag items, a user could accidentally remove all of the items from the bag scrolling value til  -1. Since this feature is picked from HTML as a first on mobile view it was not working for large devices, so that is why I have decided to remove that possibility for mobile users to pass validation at this point. While loading data users can see the summary and proceed directly to the checkout without adjusting the bag,  this will be implemented as a future feature. 
-
+- Because of the time issue, I am kind of force to leave another issue as an unresolved bug, 
 - Another issue refers to testing manually webhook handler for Stripe payment methods, all functionality works as expected for this application, triggering a button is creating order and charge and payment intent is returned as succeded, however, I received in terminal error by sending webhook handler test which was bringing error 500, and I found that similar issue was mentioned also by other students and leaders on Slack and it was a common issue that cache_checkout_data is what populates metadata with "bag" and "save info" - [**link**](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1631980362410300)
 
 # 7. Version Control
