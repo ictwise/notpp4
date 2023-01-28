@@ -19,7 +19,7 @@
       
       <h2 class="p-4 p-md-5 mb-4 text-white rounded bg-dark text-center">Add Post</h2>
 
-      <form method="POST" enctype="multipart/form-data">
+      <form method="POST" class="form mb-2" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.media }}
         {{ form.as_p }}

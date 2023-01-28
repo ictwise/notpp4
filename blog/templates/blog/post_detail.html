@@ -13,6 +13,7 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
+      <h2 class="p-4 p-md-5 mb-4 text-white rounded bg-dark text-center col-8 offset-lg-2">{{ object.title }}</h2>
 
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -22,7 +23,7 @@
             </div>
   
             <div class="col-12 col-md-6 col-lg-4">
-                <h2 class="p-4 p-md-5 mb-4 text-white rounded bg-dark text-center">{{ object.title }}</h2>
+                
                 <br/>
                 <p class="article-content">{{ object.body }}</p>
                 <p class="mr-2 text-right">{{ object.post_date|date:"F d, Y" }}</p>
