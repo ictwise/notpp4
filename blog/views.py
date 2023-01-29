@@ -21,7 +21,6 @@ class AddPostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/add_post.html'
-    
 
 
 class EditPostView(UpdateView):
