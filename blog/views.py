@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Post, Comment
 from django.urls import reverse_lazy, reverse
 from .forms import PostForm, CommentForm
@@ -19,15 +19,22 @@ class PostDetailView(DetailView):
 
 class AddPostView(CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'blog/add_post.html'
-    fields = '__all__'
+    
+
+
+class EditPostView(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'blog/edit_post.html'
 
 
 class AddCommentView(CreateView):
     model = Comment
     form_class = CommentForm
     template_name = 'blog/add_comment.html'
-    
+
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
 
