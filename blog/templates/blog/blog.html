@@ -26,10 +26,14 @@
     {% for post in posts %}
     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
       <div class="card h-100 border-0">
-        {% if post.post_image.url %}
-          <a href="{% url 'post-detail' post.pk %}">
+        {% if post.post_image %}
+            <a href="{% url 'post-detail' post.pk %}">
                     <img class="card-img-top img-fluid" src="{{ post.post_image.url }}" alt="{{ post.title }}">
-          </a>
+            </a>
+            {% else %}
+                <a href="{% url 'post-detail' post.pk %}">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+            </a>
         {% endif %}
           
       {% if request.user.is_superuser %}
