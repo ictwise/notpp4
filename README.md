@@ -46,7 +46,7 @@ The potential users of this application are cyclists of all levels and types who
 > Customer/Shopper Stories 
 
 - As a shopper, I wish to be able to view a list of products, so that I can select  items to purchase
-- As a shopper, I wish to be able to view individual product details, so that I can identity the price, description, product image
+- As a shopper, I wish to be able to view individual product details, so that I can identity the price, descriptionmand view the product image (where one is available)
 - As a shopper, I wish to be able to easily view the total of my purchases at any time, so that I can control my shops and avoid spending too much
 - As a shopper, I wish to be able to sort a specific category of products, so that I can find the product in a specific category
 - As a shopper, I wish to be able to search for a product by name or description, so that I can find the product I wish to buy according to my personal needs
