@@ -28,10 +28,10 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, 
+                messages.error(request,
                                "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
             products = products.filter(queries)
@@ -39,11 +39,11 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
-        'current_categories': categories,    
+        'current_categories': categories,
     }
 
     return render(request, 'products/products.html', context)
-    
+
 
 def product_detail(request, product_id):
     """ A view to show product details """
@@ -63,7 +63,7 @@ def add_product(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -75,7 +75,7 @@ def add_product(request):
             (request, 'Failed to add product. Ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -99,7 +99,7 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 
+            messages.error(request,
                            'Failed to update product. Is the form is valid?')
     else:
         form = ProductForm(instance=product)
