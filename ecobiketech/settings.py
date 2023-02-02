@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = int(os.environ.get("DEVELOPMENT", default=0))
 
 ALLOWED_HOSTS = ['ecobiketech.herokuapp.com', 'localhost']
 
