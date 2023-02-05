@@ -25,5 +25,10 @@
         {{ form.as_p }}
       <button class="btn btn-secondary">Save Post</button>
       </form>
+
+<script>
+  var name ="{{ user.id }}";
+  document.getElementById("post-author").value = name;
+</script>
       
 {% endblock %}

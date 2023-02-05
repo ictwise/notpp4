@@ -17,9 +17,15 @@ class PostForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Enter a Title Tag'
                 }),
-            'author': forms.Select(attrs={
-                'class': 'form-control'
+            # 'author': forms.Select(attrs={
+            #     'class': 'form-control'
+            #     }),
+            'author': forms.TextInput(attrs={
+                'class': 'form-control',
+                'value': '', 'id': 'post-author', 'type': 'hidden'
                 }),
+            
+
 
 
             'body': forms.Textarea(attrs={
