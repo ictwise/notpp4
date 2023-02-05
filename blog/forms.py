@@ -24,7 +24,6 @@ class PostForm(forms.ModelForm):
                 'class': 'form-control',
                 'value': '', 'id': 'post-author', 'type': 'hidden'
                 }),
-            
 
 
 

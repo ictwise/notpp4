@@ -3,6 +3,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Post, Comment
 from django.urls import reverse_lazy, reverse
 from .forms import PostForm, CommentForm
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 class PostListView(ListView):
@@ -17,16 +18,22 @@ class PostDetailView(DetailView):
     template_name = 'blog/post_detail.html'
 
 
-class AddPostView(CreateView):
+class AddPostView(UserPassesTestMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/add_post.html'
 
+    def test_func(self):
+        return self.request.user.is_superuser
 
-class EditPostView(UpdateView):
+
+class EditPostView(UserPassesTestMixin, UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/edit_post.html'
+
+    def test_func(self):
+        return self.request.user.is_superuser
 
 
 class AddCommentView(CreateView):
