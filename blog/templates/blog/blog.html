@@ -40,6 +40,11 @@
           <small class="ml-3 text-right">
             <a href="{% url 'edit_post' post.id %}">Edit Post</a>  
         </small>
+
+        <small class="ml-3 text-right">
+            <a href="{% url 'delete_post' post.id %}">Delete Post</a>  
+        </small>
+
       {% endif %}
           <div class="card-body pb-0">
               <p class="lead mb-0 text-left font-weight-bold">{{ post.title }}</p>
