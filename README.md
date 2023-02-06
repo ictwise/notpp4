@@ -23,7 +23,7 @@ The project was designed to showcase advanced coding abilities as part of the Co
 EcoBikeTech is a full-featured application for an existing brand that enables users to interact with the website. The goal of the app is to provide ecommerce functionality to their current offerings, allowing users to store their information for future orders and make secure purchases. The website also includes a blog section where the site owner can post useful bike maintenance information and readers can comment. This feature is expected to drive traffic back to the site, increasing the opportunity for purchases. The website is designed to be easily accessible on any device, including phones, tablets, and computers, allowing users to access it at any time and from anywhere.  The app is designed for accessibility on all devices and has the potential for future expansion with additional features.
 
 
-<img src="docs/pictures/Mockup_MS4.jpg" style="margin: 0;">
+<img src="static/docs/images/responsive.png" style="margin: 0;">
 
 
 # 2. UXD – User Experience Design
@@ -124,21 +124,25 @@ The application's structure prioritises meeting the needs of the users. All page
 - **Add Comment** Page -  A form that allows the user to add their name and comment to a post, the date is automatically created.
 
 
-### **Skeleton**
+### **Wireframes**
+<object data="static/docs/images/ecobiketech_wireframes.pdf" type="application/pdf" width="750px" height="750px">
+  <embed>
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="static/docs/images/ecobiketech_wireframes.pdf">Download PDF</a>.</p>
+   </embed>
+</object>
 
-[**Wireframes:**]()
+A website that has distinct pages for various content and enables navigation among them.
 
-A website with different separate content pages and the possibility to navigate between them
-- Header – fixed navigation bar with  brand name, and clickable dropdown links for product categories, search bar for browsing keyword
-- Sections called:
-    - Home (considered also as About page) - introducing the user to the purpose of the store 
-    - All Products page, and further main categories pages 
-    - My account with dropdown for log in, register, log out, profile, admin links
-    - Wishlist for storing favorites products 
-    - Shopping bag and further checkout page for purchasing products
+It features a header with a fixed navigation bar, displaying the brand name and a dropdown menu with links to product categories, as well as a search bar for keyword searching.
+The website includes the following sections:
+Home (which also serves as an About page) that introduces users to the purpose of the store.
+An All Products page, along with additional pages for main product categories.
+My Account with a dropdown menu for logging in, registering, logging out, accessing the profile, and admin links.
+A Shopping Bag and checkout page for purchasing products.
 
 
-[**Database:**]()
+[**Database:**]
+
 
 A database created for this project consists of models for:
 - categories
@@ -152,7 +156,7 @@ A database created for this project consists of models for:
 
 The models for products, categories posts and comments in this project was created specifically for the project, and the information included (such as imagery, names, and descriptions) can be found in the credit section. SQLite was used during the development process and elephantSQL was used during the production process. The idea for the database of the ecommerce part of the site was taken from the code institute Boutique Ado walkthrough .
 
-<img src="" style="margin: 0;">
+<img src="static/docs/images/database.png" style="margin: 0;">
 
 
 ### **Surface**
@@ -164,7 +168,7 @@ The visual experience of this project reflects the theme of ecofriendly bike mai
 White background black text. Amber highlights 
 
 
-<img src="" style="margin: 0;">
+<img src="<img src="static/docs/images/products.png" style="margin: 0;">" style="margin: 0;">
 
 
 > Typography
@@ -173,7 +177,7 @@ Font 'Lato' was used. The Lato font is a popular choice for websites and applica
 
 > Icons 
 
-Icons for cards content and Bag, Account, Wishlist, and Social Media links picked from Font Awesome free collection, the web's most popular icon set, and toolkit. 
+Icons for cards content and Bag, Account, picked from Font Awesome free collection, the web's most popular icon set, and toolkit. 
 
 > Images 
 
@@ -193,15 +197,15 @@ The website has been designed with the user experience in mind, making it easy a
 
 - **Top Navigation Bar** - The navigation bar, which is a prominent feature on every page, has been designed to be fully responsive, allowing users to effortlessly browse the site. Additionally, if a user has items in their shopping cart, the cost of those items is displayed on the screen.
 
-<img src="docs/pictures/features/navbar_feature.jpg" style="margin: 0;">
+<img src="/workspace/notpp4/static/docs/images/navbar.png" style="margin: 0;">
 
 - **Search Bar** -The navigation bar includes a search function, allowing users to easily search for products by name or description. The results display a simple active link that takes the user directly to the page displaying all relevant products.
 
-<img src="docs/pictures/features/search_feature.jpg" style="margin: 0;">
+<img src="static/docs/images/search.png" style="margin: 0;">
 
 - **Home/About Page** - The Home/About page serves as an introduction to the site, featuring a hero image with a "Shop Here" button and card panels showcasing the philosophy of environmentally friendly products.
   
-<img src="docs/pictures/features/about_feature.jpg" style="margin: 0;">
+<img src="static/docs/images/index.png" style="margin: 0;">
 
 - **Alerts/Messages** - Bootstrap toasts provide real-time feedback to users after they take actions related to products, such as adding or deleting items from their shopping cart. Shoppers have full control over their interactions with the page, including the number of items in their cart, the total cost, and updates on successful additions or deletions. The checkout process includes a button to initiate the transaction.
 
@@ -209,11 +213,11 @@ The website has been designed with the user experience in mind, making it easy a
 
 - **Products Store** - The Shop page showcases all available products in a clean and visually appealing layout, displaying four products per row on large screens and one product per row on mobile devices. The standard card design provides an easy-to-use interface, with clear elements and an option to view more details about a product by clicking on its image, which takes the user to the product detail page.
 
-<img src="docs/pictures/features/store_feature.jpg" style="margin: 0;">
+<img src="static/docs/images/login.png" style="margin: 0;">
 
 - **Register/Login/Logout Pages** - These features enable users to create a profile by signing up, log in as a returning customer, and securely log out to save their data for future use. Authentication is provided to ensure protection of the user's information.
   
-<img src="docs/pictures/features/register_feature.jpg" style="margin: 0;">
+<img src="static/docs/images/login.png" style="margin: 0;">
   
 
 - **Profile Page** - CThe user profile includes pre-filled information such as name, county, postcode, street, and a complete history of orders. Users can view previous orders and update their personal and delivery information. Only authenticated users have access to this feature.
@@ -276,7 +280,7 @@ The website has been designed with the user experience in mind, making it easy a
 The final result of this project is a full-stack, front-end and back-end web application based on the principles of user experience design, accessibility, and functionality. 
 **This is an interactive front-end and back-end web application developed and implemented by using HTML, CSS, JavaScript, Python+Django, with additional Bootstrap elements**, testing was performed based on the website's functionality for obtaining and saving data, visual impacts, layout, and user interactions during navigation and purchasing products.
 
-**General manual and further testing results, like user stories, CRUD, code validation :** ---> please click [**HERE**](tests.md)
+**Testing results :** ---> please click [**HERE**](static/docs/TESTING.md)
 
 
 # 6. Project barriers and solutions
@@ -430,6 +434,7 @@ The text content for this page was created by the site owner of ecobiketech.com 
 # 10. Acknowledgments
 
 - Inspiration for this project was the walkthrough full e-commerce project "Boutique Ado" created by CI
-- I would like to say, a big thank you, to the whole Code Institute assessment team and tutors for creating inspiring content for the course and general idea for this learning process. I would like to say thank you to the student care for being so nice and helpful, and the student Slack community, especially for active students and leaders, for being a team and very helpful every single time when needed. Last but not least my mentor Sandeep Aggarwal for his guidance, patience, and effort during the development process.
-Thank you all for this experience. I know that this journey was not easy, I never thought that I could come to this moment.
+- I want to extend my gratitude to the entire Code Institute assessment team, as well as the tutors, for providing engaging course content and a well-structured learning process. I am also thankful for the student care team, who were always kind and helpful, and the student Slack community, especially its active students and leaders, who created a supportive and collaborative environment. Lastly, I want to acknowledge my mentor, Chris Quinn , for his guidance, patience, and dedication during the development process.
+
+- I am grateful for this experience, which at times, I never thought I could complete. I appreciate everything that has been done to help make this journey a success.
 
