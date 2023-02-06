@@ -37,7 +37,7 @@ The potential users of this application are cyclists of all levels and types who
 
 ### **User Stories**
 
-- As a store owner, I want to be able to manage the product inventory, including the ability to add, edit, and delete products, in order to keep their offerings up-to-date and accurate.
+- As a store owner, I want to be able to manage the product inventory, including the ability to add products, in order to keep their offerings up-to-date and accurate.
 - As a store owner, I wish to have the ability to change product prices, descriptions, images, and other criteria as needed, in order to keep my store up to date and accurate.
 - As a store owner, I want the ability to remove products that are no longer available for sale, in order to keep my store's inventory current and accurate.
 - As a store owner, I want to be able to provide secure payment options for my customers, in order to ensure their personal and financial information is protected and to build trust with them.
@@ -63,7 +63,7 @@ The potential users of this application are cyclists of all levels and types who
 
 - As a user of the website, I wish to have an intuitive navigation menu, so that I can quickly access different sections of the site
 - As a user of the website, I wish that design is responsive, so I can look at the page on different sizes of devices
-- As a user of the website, I wish to have the possibility to create comment on a post, so I can share an opinion about the post with other users
+- As a user of the website, I wish to be able to create comment on a post, so I can share an opinion about the post with other users
 - As a user of the website, I wish to be able to easily register for an account, so that I can have a personalized account and be able to view and update my profile
 - As a user of the website, I wish to be able to easily login or logout, so that I can access my personal account information and update them if needed
 - As a user of the website, I wish to be able to easily recover my password in case I forget it, so that I can recover access to my account
