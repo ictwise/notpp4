@@ -264,33 +264,27 @@ The website has been designed with the user experience in mind, making it easy a
 * [**JSHint**](https://jshint.com/) - was used as tool that helps to detect errors and potential problems in JavaScript code.
 * [**Json Formatter**](https://jsonformatter.curiousconcept.com/) - was used as json file formatter and validator
 * [**Json Online Viewer**](https://countwordsfree.com/jsonviewer) - was used to display json file tree view for data base fixtures 
-* [**PEP8 online**](http://pep8online.com/) - was used as tool check the code for PEP8 requirements
+* [**Flake8**](http://pep8online.com/) - was used as tool check the code for PEP8 requirements
 * [**Google Python Style Guide**](https://google.github.io/styleguide/pyguide.html#383-functions-and-methods) - was used as root of information about Python rules
 * [**Closing Tag Checker for HTML5**](https://www.aliciaramirez.com/closing-tags-checker/) - was used to validate if all tags are open and close correctly.
 * [**HTML and CSS and JS Formatter**](https://webformatter.com/html) - Free online tool to format an ugly HTML code, making it readable and pretty, with the proper indentation.
 * [**Black**](https://black.vercel.app/) - The uncompromising Python code formatter.
-* [**TempMail**](https://temp-mail.org/) - used to create temporary email adress for testing part
-* [**Grammarly**](https://app.grammarly.com/) - a comprehensive writing tool was used as a helper to write clear and correct text.
-* [**FaviconeCodeGenerator**](https://www.faviconcodegenerator.com/) - Favicon Code Generator is Free Online Favicon Converter and has been used to create a little graphic image (icon) associated with a webpage.
-* [**Coolors**](https://coolors.co/image-picker) - The super fast color schemes generator was used to create a color pallet for project from photo/logo image
 * **Microsoft Paint** - a simple raster graphics editor has been used for editing and resizing pictures.
 
 # 5. Testing
 
 The final result of this project is a full-stack, front-end and back-end web application based on the principles of user experience design, accessibility, and functionality. 
-**This is an interactive front-end and back-end web application developed and implemented by using HTML, CSS, JavaScript, Python+Django, with additional Bootstrap elements**, so required testing was conducted based on functionality for getting and storing data, visual effects, website layout, and interactive actions which user can take during navigation and purchasing products.
+**This is an interactive front-end and back-end web application developed and implemented by using HTML, CSS, JavaScript, Python+Django, with additional Bootstrap elements**, testing was performed based on the website's functionality for obtaining and saving data, visual impacts, layout, and user interactions during navigation and purchasing products.
 
 **General manual and further testing results, like user stories, CRUD, code validation :** ---> please click [**HERE**](tests.md)
 
 
 # 6. Project barriers and solutions
 
-At some point my env.py must have been pushe to git. I checked and it was listed in .gitignore but it was definately being tracked in git. My tutor helped me clear the cache so it no longer saved to the git history, I then changed all the secret keys and passwords before pushing to git and then double checked that it was no longer being saved. This was a major error, thankfully caught in time and a great learning opportunity. This is somethin I will be extra vigallent to in the future.
+During the development process, my env.py file was mistakenly pushed to the Git repository despite being listed in the .gitignore file. With the assistance of my tutor I cleared the cache to remove it from the Git history. I then changed all the secret keys and passwords, thoroughly double-checked that it was no longer being tracked, and committed the changes. This was a crucial error that was fortunately caught in time and became a valuable lesson for me. I will be more cautious about this in the future.
 
 
-
-- Because of the time issue, I am kind of force to leave another issue as an unresolved bug, 
-- Another issue refers to testing manually webhook handler for Stripe payment methods, all functionality works as expected for this application, triggering a button is creating order and charge and payment intent is returned as succeded, however, I received in terminal error by sending webhook handler test which was bringing error 500, and I found that similar issue was mentioned also by other students and leaders on Slack and it was a common issue that cache_checkout_data is what populates metadata with "bag" and "save info" - [**link**](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1631980362410300)
+ 
 
 # 7. Version Control
 
@@ -306,11 +300,11 @@ This project was edited and developed using the IDE GitPod and version control s
 
 > Deployment steps to the Heroku hosting page consist of:
 
-- create a new repository in GitHub named 'Easy_Skincare' by using a mentioned template
+- create a new repository in GitHub named 'notpp4' by using a template
 - open the repository in GitPod-VSC by cloning the repo from GitHub
 - develop a fundamental part of the project to the stage when is ready for deployment to the hosting platform
 - log in to Heroku page and click "New' and then select 'Create New App'
-- give an app a unique name, using dashes instead of spaces, like entering 'easy-skincare' in the input field 'App name'  
+- give an app a unique name, using dashes instead of spaces, like entering 'ecobiketech' in the input field 'App name'  
 - select the region free to use and closest to my location 'Europe' and click 'Create App'
 - head to 'Resources' tab and type in Postgres in the Add-ons search bar
 - select Heroku Postgres and provision a Hobby Dev-Free database
@@ -402,7 +396,7 @@ select 'Policies' and then create a policy
 
 - navigate to my GitHub repo
 - click the Code button next to the Green Gitpod button 
-- choose either to download the zip file or clone the repo using GH https://github.com/MaggieDaisy/Easy_Skincare.git repo clone in the terminal 
+- choose either to download the zip file or clone the repo using GH https://github.com/ictwise/notpp4 repo clone in the terminal 
 - install the modules listed in the requirements.txt file by typing `python3 -m pip -r requirements.txt` in the terminal
 - install the JSON files using `python3 manage.py loaddata categories`, and `python3 manage.py loaddata products`, in this order
 - create a SuperUser by using `python3 manage.py createsuperuser` and follow further instructions
@@ -423,37 +417,19 @@ os.environ.setdefault("EMAIL_HOST_USER", "value here")
 
 > Content
 
-The text content for this page was created by student Malgorzata Czerwonka (self-written) for a **non-existing company**, and for **educational purposes only**. Inspiration to create informative and consistent content through different parts of application was self-interest in a beauty field and following after world-class specialists from skincare and world-class trusted companies.
- 
-- [**CeraVe**](https://www.cerave.com/)
-- [**The Ordinary**](https://deciem.com/en-us/theordinary)
-- [**The Inkey List**](https://www.theinkeylist.com/)
-- [**Naturium**](https://naturium.com/)
-- [**Paula's Choice**](https://www.paulaschoice.com/)
-- [**Neutrogena**](https://www.neutrogena.com/)
-- [**Colorscience**](https://www.colorescience.com/)
-- [**COSRX**](https://www.cosrx.com/)
-
+The text content for this page was created by the site owner of ecobiketech.com **with their permission**, but this site is for **educational purposes only**. 
 > Media
 
-All the images used in this site to provide product visuality were picked from producers and product providers like those listed above. The rest pictures used for design were picked.
 
-- [**Flaticon**](https://www.flaticon.com/) - free vector icons and stickers for dev projects, resources made by and for designers
-
-- [**Unsplash**](https://unsplash.com/) - a website dedicated to sharing stock photography for free for every kind of project
 
 > Code
-- Code inspiration for the whole project and code snippets for the fundamental base structure borrowed from Walkthrough Project created by CI - [**Boutique Ado**](https://mag-boutique-ado.herokuapp.com/)
-- Code inspiration for Review model borrowed and adapted from tutorial - [**Product reviews - How to build an Ecommerce website using Django**](https://www.youtube.com/watch?v=Y5vvGQyHtpM)
-- Code inspiration for Wishlist model borrowed and adpated, after second learning session, from my mentor Sandeep Aggarwal
-- Django Rated Reviews - [**Quick start guide**](https://django-rated-reviews.readthedocs.io/en/latest/quickstart.html)
-- [**Django Tutorial Part 3: Using models**](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models)
-
+- The code for the entire project was heavily influenced by the Walkthrough Project, created by Code Institute, called Boutique Ado. Key components and code snippets were borrowed from this project as a starting point.
+- Code inspiration for the Blog  borrowed and adapted from tutorial - [**Build a Blog**](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
 
 
 # 10. Acknowledgments
 
 - Inspiration for this project was the walkthrough full e-commerce project "Boutique Ado" created by CI
 - I would like to say, a big thank you, to the whole Code Institute assessment team and tutors for creating inspiring content for the course and general idea for this learning process. I would like to say thank you to the student care for being so nice and helpful, and the student Slack community, especially for active students and leaders, for being a team and very helpful every single time when needed. Last but not least my mentor Sandeep Aggarwal for his guidance, patience, and effort during the development process.
-Thank you all for this experience. I know that this journey was not easy, I never thought that I could come to this moment, and I hope that something exciting is just about to begin. Stay safe and healthy, and I hope that you enjoyed this project as much as I do. 
+Thank you all for this experience. I know that this journey was not easy, I never thought that I could come to this moment.
 
