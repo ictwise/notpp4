@@ -20,7 +20,7 @@ The project was designed to showcase advanced coding abilities as part of the Co
 
 [**Please, to view the live project ---> Click Here**](https://ecobiketech.herokuapp.com/)
 
-EcoBikeTech is a full-featured application for an existing brand that enables users to interact with the website. The goal of the app is to provide ecommerce functionality to their current offerings, allowing users to store their information for future orders and make secure purchases. The website also includes a blog section where the site owner can post useful bike maintenance information and readers can comment. This feature is expected to drive traffic back to the site, increasing the opportunity for purchases. The website is designed to be easily accessible on any device, including phones, tablets, and computers, allowing users to access it at any time and from anywhere. This project has the potential for expansion in the future with the addition of more detailed categories and services.
+EcoBikeTech is a full-featured application for an existing brand that enables users to interact with the website. The goal of the app is to provide ecommerce functionality to their current offerings, allowing users to store their information for future orders and make secure purchases. The website also includes a blog section where the site owner can post useful bike maintenance information and readers can comment. This feature is expected to drive traffic back to the site, increasing the opportunity for purchases. The website is designed to be easily accessible on any device, including phones, tablets, and computers, allowing users to access it at any time and from anywhere.  The app is designed for accessibility on all devices and has the potential for future expansion with additional features.
 
 
 <img src="docs/pictures/Mockup_MS4.jpg" style="margin: 0;">
@@ -37,7 +37,7 @@ The potential users of this application are cyclists of all levels and types who
 
 ### **User Stories**
 
-- As a store owner, I want to be able to manage the product inventory easily, so that I can add new products, edit existing ones, and delete items that are no longer available for sale.
+- As a store owner, I want to be able to manage the product inventory, including the ability to add, edit, and delete products, in order to keep their offerings up-to-date and accurate.
 - As a store owner, I wish to have the ability to change product prices, descriptions, images, and other criteria as needed, in order to keep my store up to date and accurate.
 - As a store owner, I want the ability to remove products that are no longer available for sale, in order to keep my store's inventory current and accurate.
 - As a store owner, I want to be able to provide secure payment options for my customers, in order to ensure their personal and financial information is protected and to build trust with them.
@@ -73,24 +73,24 @@ The potential users of this application are cyclists of all levels and types who
 ### **Scope**
 
 Current and further developing and designing skill ability, the website provides:
-- Clean User Experience by using technologies mentioned in the introduction - HTML, CSS, JavaScript, Python + Django, Stripe, Heroku
+- A clean User Experience by using technologies mentioned in the introduction - HTML, CSS, JavaScript, Python + Django, Stripe, Heroku
 - Easy and intuitive navigation via the navbar with dropdown categories of products and services, and a toggle button for the mobile version
-- Informative content builds to give a clean and modern impression of the purpose of the website 
+- Informative content that gives a clean and modern impression of the purpose of the website 
 - Responsive design allows navigating on different devices
-- Interactive features which are focused on providing a functional and appealing space for the user (buy button, wishlist, review, bag, account with profile, checkout)
+- Interactive features which are focused on providing a functional and appealing space for the user (buy button, bag, account with profile, checkout, blog)
 - Landing page with the hero image, introduction paragraph, shop button. Introduction content below with philosophy and services 
 - Pieces of key information about each product, like description, price, image
 - Clear and simple searching bar to browse for products and keywords
 - Informative and simple steps of making a secure purchase, add items to the bag, form for personal and payment information, a list with order details and confirmation
 - Secure log out feature
 - Data securly stored
-- The simple mean of how to create, add, edit and delete Products - reserved for the Management Production only 
-- The simple mean of how to create, blog posts - reserved for the Management Production only 
+- The simple mean of how to create, add, edit and delete Products - reserved for the store owner only 
+- The simple mean of how to create, add, edit and delete blog posts - reserved for the store owner only 
 
 
 ### **Structure**
 
-The application's structure prioritises meeting the needs of the users. All pages feature a consistent style and layout, including a navigation bar with clear and modern clickable options, well-designed content, and a standard footer. The visual design and overall aesthetic are consistent throughout the entire app.
+The application's structure prioritises meeting the needs of the users. All pages feature a consistent style and layout, including a navigation bar with clear and modern clickable options, well-designed content. The visual design and overall aesthetic are consistent throughout the entire app.
 - **The Navigation Bar** located at the top of the page is consistent and includes the following elements:
     - The brand name which serves as a link to the main page
     - A search bar
@@ -115,10 +115,10 @@ The application's structure prioritises meeting the needs of the users. All page
     - an add to bag button
 - **Register Page** - contains fields to fill up with 'Username' and 'Password' and a 'Register' button, and a link to the 'Log In' Page
 - **Log In** Page - contains fields to fill up with 'Username' and 'Password' and a 'Login' button, and a link to the Register Page
-- **Profile** Page - contains personal information about a user, delivery details, and order history, this page is available for registered users
+- **Profile** Page - contains personal information about a user, address details, and order history, this page is available for registered users
 - **Sign Out** link - allows user to log out from the profile to protect a  stored data
 - **Shopping Bag** Page - contains an image and name of the product, price, quantity, grand total information, as well as continue shopping and secure checkout buttons for more actions
-- **Checkout** Page - contains a form for details, delivery, and payment information, adjust bag and complete order buttons, and order summary with image, name, quantity, subtotal, delivery, and grand total information
+- **Checkout** Page - contains a form for details, delivery, and payment information, adjust bag and complete order buttons, and order summary with image, name, quantity, subtotal,  and grand total information
 - **Blog** Page - contains card panels with the Post Title and date, each card contains an image that acts as a clickable button for the further view of the full post details
 - **Post Detail** Page -  contains title, body,  also add comment button
 - **Add Comment** Page -  A form that allows the user to add their name and comment to a post, the date is automatically created.
@@ -129,7 +129,7 @@ The application's structure prioritises meeting the needs of the users. All page
 [**Wireframes:**]()
 
 A website with different separate content pages and the possibility to navigate between them
-- Header – fixed navigation bar with logo, brand name, and clickable dropdown links for product categories, search bar for browsing keyword
+- Header – fixed navigation bar with  brand name, and clickable dropdown links for product categories, search bar for browsing keyword
 - Sections called:
     - Home (considered also as About page) - introducing the user to the purpose of the store 
     - All Products page, and further main categories pages 
@@ -169,7 +169,7 @@ White background black text. Amber highlights
 
 > Typography
 
-Font 'Rubik' was used for the clean and transparent experience for the whole body content. Selected from Google Fonts after recommendations other developers as one of the top 20 for e-business. This specific one is good for clear readability and the professional layout of the e-commerce store with beauty products.
+Font 'Lato' was used. The Lato font is a popular choice for websites and applications due to its versatility and legibility. Lato is a sans-serif font that was designed to look good on screens and in print, making it a suitable choice for digital products. It has a clean, modern appearance that works well for a variety of purposes, from body text to headings. Additionally, the Lato font family includes a wide range of weights, allowing designers to create a consistent look and feel across different elements of a product. Overall, Lato's versatility, legibility, and range of weights make it a popular choice among designers and developers..
 
 > Icons 
 
@@ -182,62 +182,56 @@ The hero image on the Home Page reflects the exact purpose of the site.
 
 > General Design
 
- A core part of design solutions was borrowed also from the walkthrough project as a base. Improving the design and it's branding is a future enhancement. The limit of time, unfortunately, stopped me from experimenting with design  as functionality became my main priority. 
-
+The design for this project was largely influenced by the code institute walkthrough project, with plans for enhancing the design and branding in the future. However, due to limited time, the focus shifted to ensuring the functionality of the product, leaving little room for experimentation with the design.
 
 
 # 3. Features
 
 > Existing Features shown across the pages
 
-Existing features on the site were created for making the User's Experience easy and intuitive. Application is clear to understand, as a first visible is the purpose of the website which is reading, shopping, storing data, and sharing reviews with others. Space created for users is very simple and comfortable, all features are clearly specified and pointing users to take further steps. The navigation bar and footer are consistent and act as a present component on every page which makes navigation smooth. Name of separate pages acts as active links and brings users to different parts of content and experiences. 
+The website has been designed with the user experience in mind, making it easy and intuitive to use. The purpose of the website, which includes reading blogs and  shopping, is clearly visible upon first viewing. The user interface is simple and comfortable, with all features clearly defined and guiding users towards their next steps. The navigation bar is consistent throughout the site, making navigation seamless. The names of each page serve as active links that direct users to different sections of content and experiences.
 
-- **Top Navigation Bar** - Implemented navbar is a visible element on every page and is fully responsive so that users can browse across the site smoothly. If a user has something in the bag the cost of the current shops' displays on the screen.
+- **Top Navigation Bar** - The navigation bar, which is a prominent feature on every page, has been designed to be fully responsive, allowing users to effortlessly browse the site. Additionally, if a user has items in their shopping cart, the cost of those items is displayed on the screen.
 
 <img src="docs/pictures/features/navbar_feature.jpg" style="margin: 0;">
 
-- **Search Bar** - Users have the possibility for search function within the navigation bar to search for products names or descriptions, the result displays a simple active link that redirects the user to the all products page.
+- **Search Bar** -The navigation bar includes a search function, allowing users to easily search for products by name or description. The results display a simple active link that takes the user directly to the page displaying all relevant products.
 
 <img src="docs/pictures/features/search_feature.jpg" style="margin: 0;">
 
-- **Home/About Page** - Home/About page features acts as an introduction to the site, hero image with shop here button, and cards panels with a philosophy of easy and simple skincare routines.
+- **Home/About Page** - The Home/About page serves as an introduction to the site, featuring a hero image with a "Shop Here" button and card panels showcasing the philosophy of environmentally friendly products.
   
 <img src="docs/pictures/features/about_feature.jpg" style="margin: 0;">
 
-- **Alerts/Messages** - Bootstrap toasts providing feedback to the user after clickable actions related to the products. Shoppers can have control all the time when they are interacting with the page, like a number of items in the bag, and total cost, update that some product was successfully added or deleted, button to the checkout and calculation for a free delivery option over spending a specific amount of money.
+- **Alerts/Messages** - Bootstrap toasts provide real-time feedback to users after they take actions related to products, such as adding or deleting items from their shopping cart. Shoppers have full control over their interactions with the page, including the number of items in their cart, the total cost, and updates on successful additions or deletions. The checkout process includes a button to initiate the transaction.
 
 <img src="docs/pictures/features/toast_feature.jpg" style="margin: 0;">
 
-- **Products Store** - The Shop page displays all products on large resolutions in a row of four, and mobile screens in a row of one. Standard card layout gives a clean user experience with visible elements, and clicking the image will bring the user to the product detail page.
+- **Products Store** - The Shop page showcases all available products in a clean and visually appealing layout, displaying four products per row on large screens and one product per row on mobile devices. The standard card design provides an easy-to-use interface, with clear elements and an option to view more details about a product by clicking on its image, which takes the user to the product detail page.
 
 <img src="docs/pictures/features/store_feature.jpg" style="margin: 0;">
 
-- **Register/Login/Logout Pages** - those features allow the user to  sign up to the page to create a profile, to log in as a coming back customer in the future, and log out to safe data for later under protection from outside, authentication for a user is being provided
+- **Register/Login/Logout Pages** - These features enable users to create a profile by signing up, log in as a returning customer, and securely log out to save their data for future use. Authentication is provided to ensure protection of the user's information.
   
 <img src="docs/pictures/features/register_feature.jpg" style="margin: 0;">
   
 
-- **Profile Page** - Contains all prefilled information about user name, county, postcode, street, and whole order history with a possibility to check back for previous orders, user can update their data about themself and delivery, only authenticated/authorized users have access to this feature.
+- **Profile Page** - CThe user profile includes pre-filled information such as name, county, postcode, street, and a complete history of orders. Users can view previous orders and update their personal and delivery information. Only authenticated users have access to this feature.
 
 <img src="docs/pictures/features/profile_feature.jpg" style="margin: 0;">
 
-- **Shopping Bag** - The shopping bag page is fully responsive, showing users a product picture, name, and total price, users can also use the update link to increase or decrease the number of products in their bag or delete link to remove it from bag. All prices are provided, like total and delivery cost and information about free delivery or how much more needs to be spent to get free delivery. 
+- **Shopping Bag** - The Shopping Bag page is optimized for all devices and displays a product's picture, name, and total cost. Users can adjust the quantity of products in their bag or remove items entirely with the update or delete links. 
 
 <img src="docs/pictures/features/bag_feature.jpg" style="margin: 0;">
 
-- **Footer** - Contains Social Media icons that act as links for Facebook, Instagram, and YouTube and bring the user to the main platforms. In the future should bring the user to real social media provided by the community. Links open in a new tab so that the user can smoothly navigate back to the application. Added also email Icon, that directs to the postbox, in the future real contact feature will be provided and expanded. 
 
-<img src="docs/pictures/features/footer_feature.jpg" style="margin: 0;">
 
-> Features left to implement in the future when skills developed
+> Features left to implement in the future 
 
-- Definitely in future great idea would be to add much more products to the store together with more categories of products.
+- The comments section is only accessible for logged in users and they have the ability to edit or delete their own comments. Supporting the nesting of comments.
+- A calendar showing available appointment slots.
 
-- The application could have a blog to provide posting and exchanging opinions about new technologies in skincare, new and existing products, and advice about how to treat different skin issues and results achieved after recommended treatment.
 
-- It would be nice to include video consultations so that users can meet up with specialists and get their bits of advice about products and recommended routines.
-
-- Create a contact form that is avaliable directly from this app for easier user experience. 
 
 # 4. Technologies and Resources used 
 * [**Code Institute Fullstack Web Developer Course Content**](https://codeinstitute.net/) - was used as the main source of fundamental knowledge and inspiration.
@@ -247,7 +241,6 @@ Existing features on the site were created for making the User's Experience easy
 * **JS - JavaScript technology** – was used as the main language to create the interactive elements of the Website.
 * **Python technology** - was used as an interpreted high-level general-purpose back end programming language
 * [**Django**](https://www.djangoproject.com/) - Django the web framework for perfectionists with deadlines.
-* [**Jinja**](https://jinja.palletsprojects.com/en/3.0.x/) - a web template engine for the Python programming language
 * [**Bootstrap**](https://getbootstrap.com/) - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
 * [**jQuery**](https://jquery.com/) - the jQuery library was used as an open-source to create interactive features.
 * [**Font Awesome**](https://fontawesome.com/) - Font Awesome Icons were used for social media links and marking separate parts of sections.
