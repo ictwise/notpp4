@@ -80,20 +80,19 @@ The result is no major errors.
 ### **Lighthouse**
 
 Lighthouse testing was completed on all pages of the site
-- [Home](static/docs/images/validation/lighthouse-home.png)
-- [Products](static/docs/images/validation/lighthouse-products.png)
-- [Product Detail](static/docs/images/validation/lighthouse-product_detail.png)
-- [Bag](static/docs/images/validation/lighthouse-bag.png)
-- [Checkout](static/docs/images/validation/lighthouse-checkout.png)
-- [Checkout Success](static/docs/images/validation/lighthouse-checkout-success.png)
+- [Home](./images/lighthouse-home.png)
+- [Products](./images/lighthouse-products.png)
+- [Product Detail](./images/lighthouse-product_detail.png)
+- [Bag](./images/lighthouse-bag.png)
+- [Checkout](./images/lighthouse-checkout.png)
+- [Checkout Success](./images/lighthouse-checkout-success.png)
 - [Profile](static/docs/images/validation/lighthouse-profile.png)
-- [Blog](static/docs/images/validation/lighthouse-blog.png)
-- [Post Detail](static/docs/images/validation/lighthouse-post-detail.png)
-- [Add Blog Post](static/docs/images/validation/lighthouse-add-post.png)
-- [Add Product](static/docs/images/validation/lighthouse-add-product.png)
+- [Blog](./images/lighthouse-blog.png)
+- [Post Detail](./images/lighthouse-blog_detail.png)
+- [Add Blog Post](./images/lighthouse-add_post.png)
+- [Add Product](./images/lighthouse-add_product.png)
 
 
-The Lighthouse scores are quite good in my opinion and a lot of the warnings that appeared were due to things outside my control like external CSS, JS and JQuery libraries. One of the main warnings was regarding the explicit height and width of images however as all the images are different ratios and generated from the backend it was not possible for me to fix this. 
 
 
 ### **Validators**
@@ -108,15 +107,15 @@ HTML validator was used for all pages and only one minor warning about the use o
 - [Checkout Success](./images/success_validator_result.png)
 - [Profile](./images/profile_validator_result.png)
 - [Blog](./images/blog_validator_result.png)
-- [Post Detail](./images/index_validator_result.png)
-- [Add Blog Post](./images/index_validator_result.png)
-- [Edit Blog Post](./images/index_validator_result.png)
-- [Add Product](./images/index_validator_result.png)
-- [Edit Product](./images/index_validator_result.png)
+- [Post Detail](./images/post-detail_validator_result.png)
+- [Add Blog Post](./images/add-post_validator_result.png)
+- [Edit Blog Post](./images/edit-post_validator_result.png)
+- [Add Product](./images/add-product_validator_result.png)
+- [Edit Product](./images/edit-product_validator_result.png)
 
 #### **CSS Jigsaw**
 CSS Jigsaw validation passed for all pages
-- [products.css](static/docs/images/validation/jigsaw-product-css.png)
+- [products.css](./images/validation/jigsaw-product-css.png)
 - [blog.css](static/docs/images/validation/jigsaw-blog-css.png)
 - [bag.css](static/docs/images/validation/jigsaw-bag-css.png)
 - [checkout.css](static/docs/images/validation/jigsaw-checkout-css.png)
