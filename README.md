@@ -1,17 +1,16 @@
 # EcoBikeTech
 
 ## Table of Contents
-1. Project purpose and introduction
-2. UXD – User Experience Design
-3. Features
-4. Technologies and Resources used
-5. Testing
-6. Project barriers and solutions
-7. Version Control
-8. Deployment
-9. Credits
-10. Acknowledgments
-
+- [**Project purpose and introduction**](#Project-purpose-and-introduction)
+- [**UXD – User Experience Design**](#UXD)
+- [**Features**](#Features)
+- [**Technologies and Resources used**](#Technologies)
+- [**Testing**](#Testing)
+- [**Project barriers and solutions**](#Barriers)
+- [**Version Control**](#Version-Control)
+- [**Deployment**](#Deployment)
+- [**Credits**](#Credits)
+- [**Acknowledgments**](#Acknowledgments)
 # 1. Project purpose and introduction
 
 The project was designed to showcase advanced coding abilities as part of the Code Institute Fullstack Web Developer Course. It mainly utilizes HTML, CSS, JavaScript, Python + Django, with Bootstrap as an additional framework. Payments are handled through Stripe, and data is stored in a Heroku Postgres relational database. The goal of the project is to create a full-featured e-commerce application that allows users to view products, add them to their cart and make secure purchases, 
@@ -26,7 +25,7 @@ EcoBikeTech is a full-featured application for an existing brand that enables us
 <img src="static/docs/images/responsive.png" style="margin: 0;">
 
 
-# 2. UXD – User Experience Design
+# UXD
 
 
 ### **Strategy**
@@ -96,7 +95,7 @@ The application's structure prioritises meeting the needs of the users. All page
     - A search bar
     - Names with icons of each site category for easy browsing between them
     - A toggle button that is visible on smaller devices.
-- **Home/About Page** ![screen](./images/products.png) - contains:
+- **Home/About Page** - contains:
     - A short introduction paragraph that provides an overview of the brand's purpose and philosophy
     - A hero image that captures the essence of the brand
     - A "Shop" button that directs users to the online store
@@ -189,7 +188,7 @@ The hero image on the Home Page reflects the exact purpose of the site.
 The design for this project was largely influenced by the code institute walkthrough project, with plans for enhancing the design and branding in the future. However, due to limited time, the focus shifted to ensuring the functionality of the product, leaving little room for experimentation with the design.
 
 
-# 3. Features
+# Features
 
 > Existing Features shown across the pages
 
@@ -203,7 +202,8 @@ The website has been designed with the user experience in mind, making it easy a
 
 - **Home/About Page** - The Home/About page serves as an introduction to the site, featuring a hero image with a "Shop Here" button and card panels showcasing the philosophy of environmentally friendly products.![screen](static/docs/images/index.png)
   
-- **Alerts/Messages** - Bootstrap toasts provide real-time feedback to users after they take actions related to products, such as adding or deleting items from their shopping cart. Shoppers have full control over their interactions with the page, including the number of items in their cart, the total cost, and updates on successful additions or deletions. The checkout process includes a button to initiate the transaction. ![screen](static/docs/images/basket_toast.png)
+- **Alerts/Messages** - Bootstrap toasts provide real-time feedback to users after they take actions related to products, such as adding or deleting items from their shopping cart. Shoppers have full control over their interactions with the page, including the number of items in their cart, the total cost, and updates on successful additions or deletions. The checkout process includes a button to initiate the transaction. 
+                ![screen](static/docs/images/basket_toast.png)
 
 
 - **Products Store** - The Shop page showcases all available products in a clean and visually appealing layout, displaying four products per row on large screens and one product per row on mobile devices. The standard card design provides an easy-to-use interface, with clear elements and an option to view more details about a product by clicking on its image, which takes the user to the product detail page. ![screen](static/docs/images/products_service.png)
@@ -228,9 +228,9 @@ The website has been designed with the user experience in mind, making it easy a
 
 
 
-# 4. Technologies and Resources used 
+# Technologies 
 * [**Code Institute Fullstack Web Developer Course Content**](https://codeinstitute.net/) - was used as the main source of fundamental knowledge and inspiration.
-* [**Code Institute „SLACK” Community**](https://slack.com/intl/en-no/) - was used as a source of assistance.
+* [**Code Institute SLACK” Community**](https://slack.com/intl/en-no/) - was used as a source of assistance.
 * **HTML - HTML5 technology** – was used as the main language to create the structure of the Website.
 * **CSS - CSS3 technology** – was used as the main language to style the Website.
 * **JS - JavaScript technology** – was used as the main language to create the interactive elements of the Website.
@@ -254,6 +254,7 @@ The website has been designed with the user experience in mind, making it easy a
 * [**Lucidchart**](https://lucid.co/product/lucidchart) - The intelligent diagramming application for every team
 * [**Am I Responsive Bookmarklet**](http://ami.responsivedesign.is/) - Multi Device Website Mockup Generator was used to create the Mockup image for this README file.
 * [**Make a README**](https://www.makeareadme.com/) – a page that shows suggestions on how to create a good Readme file.
+* [**Examples of README**](github.com) - examples of readme found in repositories on github
 * [**Mastering Markdown**](https://guides.github.com/features/mastering-markdown/)– GitHub guide about Markdown. Lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.
 * [**W3C Markup Validation Service**](https://validator.w3.org/) - validator was used to check the markup validity of content in HTML and CSS.
 * [**JSHint**](https://jshint.com/) - was used as tool that helps to detect errors and potential problems in JavaScript code.
@@ -266,7 +267,7 @@ The website has been designed with the user experience in mind, making it easy a
 * [**Black**](https://black.vercel.app/) - The uncompromising Python code formatter.
 * **Microsoft Paint** - a simple raster graphics editor has been used for editing and resizing pictures.
 
-# 5. Testing
+# Testing
 
 The final result of this project is a full-stack, front-end and back-end web application based on the principles of user experience design, accessibility, and functionality. 
 **This is an interactive front-end and back-end web application developed and implemented by using HTML, CSS, JavaScript, Python+Django, with additional Bootstrap elements**, testing was performed based on the website's functionality for obtaining and saving data, visual impacts, layout, and user interactions during navigation and purchasing products.
@@ -274,14 +275,14 @@ The final result of this project is a full-stack, front-end and back-end web app
 **Testing results :** ---> please click [**HERE**](static/docs/TESTING.md)
 
 
-# 6. Project barriers and solutions
+# Barriers
 
 During the development process, my env.py file was mistakenly pushed to the Git repository despite being listed in the .gitignore file. With the assistance of my tutor I cleared the cache to remove it from the Git history. I then changed all the secret keys and passwords, thoroughly double-checked that it was no longer being tracked, and committed the changes. This was a crucial error that was fortunately caught in time and became a valuable lesson for me. I will be more cautious about this in the future.
 
 
  
 
-# 7. Version Control
+# Version Control
 
 **Git** - free and open-source distributed **Version Control System** was used to show tracking all changes during the coding process. Commands used to approve and store files in the repository: 
 - `Git add .`  - adds files/directories to the staging area to be committed
@@ -289,9 +290,24 @@ During the development process, my env.py file was mistakenly pushed to the Git 
 - `Git push` - pushes all committed inserts into the GitHub repository
  
 
-# 8. Deployment
+# Deployment
 
 This project was edited and developed using the IDE GitPod and version control software Git to add, commit and push the code to GitHub where it was stored. This project uses recommended steps for students Code Institute template with the automatically included main branch.
 
-**deployment steos :** ---> please click [**HERE**](static/docs/DEPLOYMENT.md)
+**deployment steps :** ---> please click [**HERE**](static/docs/DEPLOYMENT.md)
+
+# Credits
+> Content
+The text content for this page was created by the site owner of ecobiketech.com **with their permission**, but this site is for **educational purposes only**. 
+> Media
+The images used were sourced from Ecobiketeck with their permission, as well as from Pixabay.
+
+> Code
+- The code for the entire project was heavily influenced by the Walkthrough Project, created by Code Institute, called Boutique Ado. Key components and code snippets were borrowed from this project as a starting point.
+- Code inspiration for the Blog  borrowed and adapted from the tutorial - [**Build a Blog**](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+# Acknowledgments
+
+My thanks go out to the entire Code Institute assessment team, as well as the mentors and tutors, for delivering a dynamic course curriculum and a well-organized learning experience. I am also appreciative of the student care team who were consistently friendly and supportive, and the student Slack community, particularly its dynamic participants and leaders, for fostering a cooperative and encouraging atmosphere. Finally, I would like to express my sincere gratitude to my mentor, Chris Quinn, for his guidance throughout the development process.
+
+This experience has been an incredible journey, and I am grateful for all that has been done to ensure its success. At times, I never believed I could see it through, but I am thankful for the opportunity.
 

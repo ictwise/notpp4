@@ -2,7 +2,7 @@
 
 
 - [**Manual Testing**](#manual-testing)
-  - [**Browsers**](#browsers)
+  - [**Browsers**](#Browsers)
   - [**Devices Used**](#devices-used)
   - [**Navigation**](#navigation)
   - [**Home Page**](#home-page)
@@ -77,11 +77,11 @@ The site was tested on these devices: Pass indicates a pass on all devices
 Lighthouse testing was completed on all pages of the site
 - [Home]![screen](./images/lighthouse-home.png)
 - [Products]![screen](./images/lighthouse-products.png)
-- [Product Detail]![screen](./images/lighthouse-product_detail.png)
+- [Product Detail]![screen](./images/lighthouse-products_detail.png)
 - [Bag]![screen](./images/lighthouse-bag.png)
 - [Checkout]![screen](./images/lighthouse-checkout.png)
-- [Checkout Success]![screen](./images/lighthouse-checkout-success.png)
-- [Profile]![screen](static/docs/images/validation/lighthouse-profile.png)
+- [Checkout Success]![screen](./images/lighthouse-success.png)
+- [Profile]![screen](./images/lighthouse-profile.png)
 - [Blog]![screen](./images/lighthouse-blog.png)
 - [Post Detail]![screen](./images/lighthouse-blog_detail.png)
 - [Add Blog Post]![screen](./images/lighthouse-add_post.png)
@@ -110,9 +110,9 @@ HTML validator was used for all pages and only one minor warning about the use o
 
 #### **CSS Jigsaw**
 CSS Jigsaw validation passed for all pages
-- [checkout.css]![screen](./images/validation/jigsaw-product-css.png)
+- [checkout.css]![screen](./images/jigsaw-product-css.png)
 
-- [base.css]![screen](static/docs/images/validation/jigsaw-base-css.png)
+- [base.css]![screen](./images/jigsaw-base-css.png)
 
 #### **JSHint**
 JavaScript JSHint validator passed for all pages
