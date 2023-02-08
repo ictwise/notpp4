@@ -300,7 +300,7 @@ During the development process, my env.py file was mistakenly pushed to the Git 
 
 # 8. Deployment
 
-This project was edited and developed using the IDE GitPod and version control software Git to add, commit and push the code to GitHub where it was stored. This project uses recommended for students Code Institute template with the automatically included main branch.
+This project was edited and developed using the IDE GitPod and version control software Git to add, commit and push the code to GitHub where it was stored. This project uses recommended steps for students Code Institute template with the automatically included main branch.
 
 > Deployment steps to the Heroku hosting page consist of:
 
@@ -428,7 +428,7 @@ The text content for this page was created by the site owner of ecobiketech.com 
 
 > Code
 - The code for the entire project was heavily influenced by the Walkthrough Project, created by Code Institute, called Boutique Ado. Key components and code snippets were borrowed from this project as a starting point.
-- Code inspiration for the Blog  borrowed and adapted from tutorial - [**Build a Blog**](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+- Code inspiration for the Blog  borrowed and adapted from the tutorial - [**Build a Blog**](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
 
 
 # 10. Acknowledgments

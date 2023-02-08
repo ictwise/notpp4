@@ -72,25 +72,20 @@ The site was tested on these devices: Pass indicates a pass on all devices
 
 [Back to contents](#contents)
 
-### **Wave**
-
-The site was inspected for accessibility using the [Wave Browser Extension](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) and changes made to HTML following this inspection. 
-The result is no major errors.
-
 ### **Lighthouse**
 
 Lighthouse testing was completed on all pages of the site
-- [Home](./images/lighthouse-home.png)
-- [Products](./images/lighthouse-products.png)
-- [Product Detail](./images/lighthouse-product_detail.png)
-- [Bag](./images/lighthouse-bag.png)
-- [Checkout](./images/lighthouse-checkout.png)
-- [Checkout Success](./images/lighthouse-checkout-success.png)
-- [Profile](static/docs/images/validation/lighthouse-profile.png)
-- [Blog](./images/lighthouse-blog.png)
-- [Post Detail](./images/lighthouse-blog_detail.png)
-- [Add Blog Post](./images/lighthouse-add_post.png)
-- [Add Product](./images/lighthouse-add_product.png)
+- [Home]![screen](./images/lighthouse-home.png)
+- [Products]![screen](./images/lighthouse-products.png)
+- [Product Detail]![screen](./images/lighthouse-product_detail.png)
+- [Bag]![screen](./images/lighthouse-bag.png)
+- [Checkout]![screen](./images/lighthouse-checkout.png)
+- [Checkout Success]![screen](./images/lighthouse-checkout-success.png)
+- [Profile]![screen](static/docs/images/validation/lighthouse-profile.png)
+- [Blog]![screen](./images/lighthouse-blog.png)
+- [Post Detail]![screen](./images/lighthouse-blog_detail.png)
+- [Add Blog Post]![screen](./images/lighthouse-add_post.png)
+- [Add Product]![screen](./images/lighthouse-add_product.png)
 
 
 
@@ -99,43 +94,37 @@ Lighthouse testing was completed on all pages of the site
 
 #### **HTML Validator**
 HTML validator was used for all pages and only one minor warning about the use of h1 element as this is used for the title but not the first child of the section. The section and h1 were used for accessibility reasons and this warning is very minor so the structure was kept in place.
-- [Home](./images/index_validator_result.png)
-- [Products](./images/products_validator_result.png)
-- [Product Detail](./images/product-detail_validator_result.png)
-- [Bag](./images/bag_validator_result.png)
-- [Checkout](./images/checkout_validator_result.png)
-- [Checkout Success](./images/success_validator_result.png)
-- [Profile](./images/profile_validator_result.png)
-- [Blog](./images/blog_validator_result.png)
-- [Post Detail](./images/post-detail_validator_result.png)
-- [Add Blog Post](./images/add-post_validator_result.png)
-- [Edit Blog Post](./images/edit-post_validator_result.png)
-- [Add Product](./images/add-product_validator_result.png)
-- [Edit Product](./images/edit-product_validator_result.png)
+- [Home]![screen](./images/index_validator_result.png)
+- [Products]![screen](./images/products_validator_result.png)
+- [Product Detail]![screen](./images/product-detail_validator_result.png)
+- [Bag]![screen](./images/bag_validator_result.png)
+- [Checkout]![screen](./images/checkout_validator_result.png)
+- [Checkout Success]![screen](./images/success_validator_result.png)
+- [Profile]![screen](./images/profile_validator_result.png)
+- [Blog]![screen](./images/blog_validator_result.png)
+- [Post Detail]![screen](./images/post-detail_validator_result.png)
+- [Add Blog Post]![screen](./images/add-post_validator_result.png)
+- [Edit Blog Post]![screen](./images/edit-post_validator_result.png)
+- [Add Product]![screen](./images/add-product_validator_result.png)
+- [Edit Product]![screen](./images/edit-product_validator_result.png)
 
 #### **CSS Jigsaw**
 CSS Jigsaw validation passed for all pages
-- [products.css](./images/validation/jigsaw-product-css.png)
-- [blog.css](static/docs/images/validation/jigsaw-blog-css.png)
-- [bag.css](static/docs/images/validation/jigsaw-bag-css.png)
-- [checkout.css](static/docs/images/validation/jigsaw-checkout-css.png)
-- [profile.css](static/docs/images/validation/jigsaw-profile-css.png)
-- [style-uni-form.css](static/docs/images/validation/jigsaw-style-uni-form-css.png)
-- [uni-form.css](static/docs/images/validation/jigsaw-uni-form-css.png)
-- [base.css](static/docs/images/validation/jigsaw-base-css.png)
+- [checkout.css]![screen](./images/validation/jigsaw-product-css.png)
+
+- [base.css]![screen](static/docs/images/validation/jigsaw-base-css.png)
 
 #### **JSHint**
 JavaScript JSHint validator passed for all pages
-- [base.js](static/docs/images/validation/jshint-base-js.png)
-- [back-to-top.js](static/docs/images/validation/jshint-back-to-top-js.png)
-- [modal.js](static/docs/images/validation/jshint-modal-js.png)
-- [sort-selector.js](static/docs/images/validation/jshint-sort-selector-js.png)
-- [uni-form-validation.jquery.js](static/docs/images/validation/jshint-uni-form-validation-jquery-js.png)
+- [base.js]![screen](static/docs/images/validation/jshint-base-js.png)
+- [back-to-top.js]![screen](static/docs/images/validation/jshint-back-to-top-js.png)
+- [modal.js]![screen](static/docs/images/validation/jshint-modal-js.png)
+- [sort-selector.js]![screen](static/docs/images/validation/jshint-sort-selector-js.png)
+- [uni-form-validation.jquery.js]![screen](static/docs/images/validation/jshint-uni-form-validation-jquery-js.png)
 
 #### **PEP8**
-- Checkout [signals](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1642780620039300) imported but not used in problems tab however this is required as it is being accessed elsewhere so the problem can be ignored.  
-- [Line too long](static/docs/images/validation/test_models_problem.png) error in test_models.py however this is required to confirm the test passes.
 
-[With all Python files open](static/docs/images/validation/pep8.png) those are the only two issues.
+No errors
+
 [Back to contents](#contents)
  

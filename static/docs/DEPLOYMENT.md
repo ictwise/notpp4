@@ -15,31 +15,98 @@ Back to [README](../../README.md)
 
 ### **Heroku Deployment**
 
-#### **Connecting to Heroku**
+
 
 The project was developed using [GitPod](https://gitpod.io/) and pushed to [GitHub](https://github.com/) then deployed on Heroku using these instructions:
 
-1. Log in to Heroku and create a new app by clicking "New" and "Create New App" and giving it an original name and setting the region to closest to your location.
-2. Navigate to Heroku Resources and add Postgres using the free plan.
-3. Create a requirements.txt file using command *pip3 freeze > requirements.txt*
-4. Create a Procfile with the terminal command *web: gunicorn knit_happens.wsgi:application* and at this point checking the Procfile to make sure there is no extra blank line as this can cause issues when deploying to Heroku.
-5. Use the loaddata command to load the fixtures for both json files: *python3 manage.py loaddata categories.json* and *python3 manage.py loaddata products.json*
-6. If it returns error message: *django.db.utils.OperationalError: FATAL: role <somerandomletters> does not exist* run *unset PGHOSTADDR* in your terminal and run the commands in step 11 again.
-7. From the CLI log in to Heroku using command *heroku login -i*.
-8. Temporarily disable Collectstatic by running: *heroku:config:set DISABLE_COLLECTSTATIC=1 --app <heroku-app-name>* So that Heroku won't try to collect static files when we deploy.
-9. Add Heroku app name to ALLOWED_HOSTS in settings.py.
-10. Commit changes to GitHub using *git add .*, *git commit -m <commit message>*, *git push*.
-11. Then deploy to Heroku using *git push heroku main*
-If the git remote isn't initialised you may have to do that first by running *heroku git:remote -a <heroku-app-name>
-12. Create a superuser using command: *heroku run python3 manage.py createsuperuser* so that you can log in to admin as required.
-13. From Heroku dashboard click "Deploy" -> "Deployment Method" and select "GitHub"
-14. Search for your GitHub repo and connect then Enable Automatic Deploys.
-15. Generate secret key. Strong secret keys can be obtained from [MiniWebTool](https://miniwebtool.com/django-secret-key-generator/). This automatically generates a secret key 50 characters long with alphanumeric characters and symbols. 
-16. Add secret key to GitPod variables and Heroku config vars.
-17. Set up Amazon AWS S3 bucket using instructions [below](#amazon-aws)
-18. In the dashboard click "Settings" -> "Reveal Config Vars"
-19. Set [config vars](#config-vars) using advice below.
+Deployment
 
+### **Setting up Database**
+Create an ElephantSQL account
+Log in to ElephantSQL.com to access your dashboard
+Click “Create New Instance”
+Set up your plan
+•	Give your plan a Name (this is commonly the name of the project)
+•	Select the Tiny Turtle (Free) plan
+•	You can leave the Tags field blank
+Select “Select Region”
+Select a data center near you
+click “Create instance”
+Log into Heroku
+Click New to create a new app
+Give your app a name and select the region closest to you. When you’re done, click Create app to confirm
+Open the Settings tab
+Add the config var DATABASE_URL, and for the value, copy in your database url from ElephantSQL.
+Open up your Gitpod tab
+In the terminal, install dj_database_url and psycopg2
+pip3 install dj_database_url==0.5.0 psycopg2
+Update your requirements.txt
+pip freeze > requirements.txt
+In your settings.py file, import dj_database_url underneath the import for os
+import os
+ import dj_database_url
+
+Scroll to the DATABASES section and update it to the following code, so that the original connection to sqlite3 is commented out and we connect to the new ElephantSQL database instead. Paste in your ElephantSQL database URL in the position indicated
+
+# DATABASES = {
+ #     'default': {
+ #         'ENGINE': 'django.db.backends.sqlite3',
+ #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+ #     }
+ # }
+     
+ DATABASES = {
+     'default': dj_database_url.parse('your-database-url-here')
+ }
+
+In the terminal, run the showmigrations command to confirm you are connected to the external database
+python3 manage.py showmigrations
+
+Migrate your database models to your new database
+
+ python3 manage.py migrate
+
+Create a superuser for your new database
+
+python3 manage.py createsuperuser
+
+login to your app admin, go to categories and create the categories of repair and service.
+You might want to add some Products but there will be opportunity to create these later through the add_product page.
+Finally, to prevent exposing our database when we push to GitHub, we will delete it again from our settings.py
+For now, your DATABASE setting in the settings.py file should look like this
+
+ DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
+ }
+
+Confirm that the data in your database on ElephantSQL has been created
+On the ElephantSQL page for your database, in the left side navigation, select “BROWSER”
+
+Click the Table queries button, select auth_user(public)
+
+When you click “Execute”, you should see your newly created superuser details displayed. This confirms your tables have been created and you can add data to your database
+
+To prevent 500 errors during login on a deployed site you need to make a one line addition to your settings file.
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+#### **Connecting to Heroku**Install gunicorn
+Pip3 install gunicorn
+Pip3 freeze > requirements.txt
+Create a Procfile
+web: gunicorn ecobiketech.wsgi:application (ensure there are no empty spaces or blank lines)
+disable collectstatic.
+By using Heroku config:set  DISABLE_COLLECTSTATIC = 1 –app
+add the hostname of our Heroku app and local host to ALLOWED_HOSTS in settings.py
+ALLOWED_HOSTS =[‘ecobiketech’, ‘localhost’]
+Commit changes to GitHub using *git add .*, *git commit -m <commit message>*, *git push*.
+Then deploy to Heroku using *git push heroku main*
+If the git remote isn't initialised you may have to do that first by running *heroku git:remote -a <heroku-app-name>
+From Heroku dashboard click "Deploy" -> "Deployment Method" and select "GitHub"
+Search for your GitHub repo and connect then Enable Automatic Deploys.
+Generate secret key. Strong secret keys can be obtained from [MiniWebTool](https://miniwebtool.com/django-secret-key-generator/). This automatically generates a secret key 50 characters long with alphanumeric characters and symbols.
+Add secret key to GitPod variables and Heroku config vars
 
 #### **Amazon AWS**
 
@@ -69,8 +136,7 @@ If the git remote isn't initialised you may have to do that first by running *he
 7. Create Group for the bucket through IAM. Create policy by importing AWS S3 Full Access policy and add ARN from bucket to the policy resources. Attach policy to group. 
 8. Create user, give programmatic access and add user to the group. Download CSV file when prompted to save access key ID an secret access key to save to environment and config [variables](#config-vars).
 9. Add AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME = 'eu-west-2' to settings.py.
-10. Add, commit and push to GitHub then navigate to Heroku to confirm static files collected successfully on the Build Log. The DISABLE_COLLECTSTATIC variable can now be deleted. 
-
+10. Add, commit and push to GitHub then navigate to Heroku to confirm static files collected successfully on the Build Log. The DISABLE_COLLECTSTATIC variable can now be deleted.
 #### **GMail Client**
 
 In `settings.py` change the `DEFAULT_FROM_EMAIL` to your own email address.
@@ -122,7 +188,7 @@ To find the values of each key:
 ### How to contribute to the site
 
 1. Navigate to [GitHub](https://github.com/) and log in
-2. Locate my [repo]()
+2. Locate my [repo](https://github.com/ictwise/notpp4/)
 3. On the right side of the screen click Fork
 4. This creates a copy in your own repository to make changes in [GitPod](https://gitpod.io/)
 5. Once finished with changes add, commit and push to your own [GitHub](https://github.com/)
@@ -132,7 +198,7 @@ To find the values of each key:
 ### How to run the project locally
 
 To clone this project from GitHub follow the instructions taken from [GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) explained here:
-1. Navigate to the [GitHub Repository](https://)
+1. Navigate to the [GitHub Repository](https://github.com/ictwise/notpp4/)
 3. To clone using HTTPS click the clipboard symbol under "Clone with HTTPS". To clone using SSH key click Use SSH then click the clipboard symbol. To clone using GitHub CLI select Use GitHub CLI and click the clipboard symbol. 
 4. Open Git Bash
 5. Change the working directory to the location you want the cloned directory to be.
@@ -140,3 +206,4 @@ To clone this project from GitHub follow the instructions taken from [GitHub Doc
 7. Press 'enter' to create your clone.
 
 [Back to contents](#contents)
+
