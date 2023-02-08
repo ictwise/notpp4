@@ -18,7 +18,7 @@ The project was designed to showcase advanced coding abilities as part of the Co
 
 # EcoBikeTech
 
-[**Please, to view the live project ---> Click Here**](https://ecobiketech.herokuapp.com/)
+[**To view the live project ---> Click Here**](https://ecobiketech.herokuapp.com/)
 
 EcoBikeTech is a full-featured application for an existing brand that enables users to interact with the website. The goal of the app is to provide ecommerce functionality to their current offerings, allowing users to store their information for future orders and make secure purchases. The website also includes a blog section where the site owner can post useful bike maintenance information and readers can comment. This feature is expected to drive traffic back to the site, increasing the opportunity for purchases. The website is designed to be easily accessible on any device, including phones, tablets, and computers, allowing users to access it at any time and from anywhere.  The app is designed for accessibility on all devices and has the potential for future expansion with additional features.
 
@@ -96,7 +96,7 @@ The application's structure prioritises meeting the needs of the users. All page
     - A search bar
     - Names with icons of each site category for easy browsing between them
     - A toggle button that is visible on smaller devices.
-- **Home/About Page** - contains:
+- **Home/About Page** ![screen](./images/products.png) - contains:
     - A short introduction paragraph that provides an overview of the brand's purpose and philosophy
     - A hero image that captures the essence of the brand
     - A "Shop" button that directs users to the online store
@@ -127,11 +127,11 @@ The application's structure prioritises meeting the needs of the users. All page
 ### **Wireframes**
 <object data="static/docs/images/ecobiketech_wireframes.pdf" type="application/pdf" width="750px" height="750px">
   <embed>
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="static/docs/images/ecobiketech_wireframes.pdf">Download PDF</a>.</p>
+        <p>Please download the PDF to view the wireframes: <a href="static/docs/images/ecobiketech_wireframes.pdf">Download PDF</a>.</p>
    </embed>
 </object>
 
-A website that has distinct pages for various content and enables navigation among them.
+A Multi-Page ecommerce Website.
 
 It features a header with a fixed navigation bar, displaying the brand name and a dropdown menu with links to product categories, as well as a search bar for keyword searching.
 The website includes the following sections:
@@ -165,10 +165,10 @@ The visual experience of this project reflects the theme of ecofriendly bike mai
 
 > Colors
 
-White background black text. Amber highlights 
+White background black text, images to provide most of colour. 
 
 
-<img src="<img src="static/docs/images/products.png" style="margin: 0;">" style="margin: 0;">
+<img src="static/docs/images/products.png" style="margin: 0;">
 
 
 > Typography
@@ -195,38 +195,29 @@ The design for this project was largely influenced by the code institute walkthr
 
 The website has been designed with the user experience in mind, making it easy and intuitive to use. The purpose of the website, which includes reading blogs and  shopping, is clearly visible upon first viewing. The user interface is simple and comfortable, with all features clearly defined and guiding users towards their next steps. The navigation bar is consistent throughout the site, making navigation seamless. The names of each page serve as active links that direct users to different sections of content and experiences.
 
-- **Top Navigation Bar** - The navigation bar, which is a prominent feature on every page, has been designed to be fully responsive, allowing users to effortlessly browse the site. Additionally, if a user has items in their shopping cart, the cost of those items is displayed on the screen.
-
-<img src="/workspace/notpp4/static/docs/images/navbar.png" style="margin: 0;">
+- **Top Navigation Bar** - The navigation bar, which is a prominent feature on every page, has been designed to be fully responsive, allowing users to effortlessly browse the site. Additionally, if a user has items in their shopping cart, the cost of those items is displayed on the screen.![screen](static/docs/images/navbar.png)
 
 - **Search Bar** -The navigation bar includes a search function, allowing users to easily search for products by name or description. The results display a simple active link that takes the user directly to the page displaying all relevant products.
+![screen](static/docs/images/search.png)
 
-<img src="static/docs/images/search.png" style="margin: 0;">
 
-- **Home/About Page** - The Home/About page serves as an introduction to the site, featuring a hero image with a "Shop Here" button and card panels showcasing the philosophy of environmentally friendly products.
+- **Home/About Page** - The Home/About page serves as an introduction to the site, featuring a hero image with a "Shop Here" button and card panels showcasing the philosophy of environmentally friendly products.![screen](static/docs/images/index.png)
   
-<img src="static/docs/images/index.png" style="margin: 0;">
+- **Alerts/Messages** - Bootstrap toasts provide real-time feedback to users after they take actions related to products, such as adding or deleting items from their shopping cart. Shoppers have full control over their interactions with the page, including the number of items in their cart, the total cost, and updates on successful additions or deletions. The checkout process includes a button to initiate the transaction. ![screen](static/docs/images/basket_toast.png)
 
-- **Alerts/Messages** - Bootstrap toasts provide real-time feedback to users after they take actions related to products, such as adding or deleting items from their shopping cart. Shoppers have full control over their interactions with the page, including the number of items in their cart, the total cost, and updates on successful additions or deletions. The checkout process includes a button to initiate the transaction.
 
-<img src="docs/pictures/features/toast_feature.jpg" style="margin: 0;">
+- **Products Store** - The Shop page showcases all available products in a clean and visually appealing layout, displaying four products per row on large screens and one product per row on mobile devices. The standard card design provides an easy-to-use interface, with clear elements and an option to view more details about a product by clicking on its image, which takes the user to the product detail page. ![screen](static/docs/images/products_service.png)
 
-- **Products Store** - The Shop page showcases all available products in a clean and visually appealing layout, displaying four products per row on large screens and one product per row on mobile devices. The standard card design provides an easy-to-use interface, with clear elements and an option to view more details about a product by clicking on its image, which takes the user to the product detail page.
 
-<img src="static/docs/images/login.png" style="margin: 0;">
-
-- **Register/Login/Logout Pages** - These features enable users to create a profile by signing up, log in as a returning customer, and securely log out to save their data for future use. Authentication is provided to ensure protection of the user's information.
+- **Register/Login/Logout Pages** - These features enable users to create a profile by signing up, log in as a returning customer, and securely log out to save their data for future use. Authentication is provided to ensure protection of the user's information. ![screen](static/docs/images/login.png)
   
-<img src="static/docs/images/login.png" style="margin: 0;">
-  
+ 
 
-- **Profile Page** - CThe user profile includes pre-filled information such as name, county, postcode, street, and a complete history of orders. Users can view previous orders and update their personal and delivery information. Only authenticated users have access to this feature.
+- **Profile Page** - The user profile includes pre-filled information such as name, county, postcode, street, and a complete history of orders. Users can view previous orders and update their personal and delivery information. Only authenticated users have access to this feature. !![screen](static/docs/images/profile.png)
 
 <img src="docs/pictures/features/profile_feature.jpg" style="margin: 0;">
 
-- **Shopping Bag** - The Shopping Bag page is optimized for all devices and displays a product's picture, name, and total cost. Users can adjust the quantity of products in their bag or remove items entirely with the update or delete links. 
-
-<img src="docs/pictures/features/bag_feature.jpg" style="margin: 0;">
+- **Shopping Bag** - The Shopping Bag page is optimized for all devices and displays a product's picture, name, and total cost. Users can adjust the quantity of products in their bag or remove items entirely with the update or delete links. ![screen](static/docs/images/bag.png)
 
 
 
@@ -302,139 +293,5 @@ During the development process, my env.py file was mistakenly pushed to the Git 
 
 This project was edited and developed using the IDE GitPod and version control software Git to add, commit and push the code to GitHub where it was stored. This project uses recommended steps for students Code Institute template with the automatically included main branch.
 
-> Deployment steps to the Heroku hosting page consist of:
-
-- create a new repository in GitHub named 'notpp4' by using a template
-- open the repository in GitPod-VSC by cloning the repo from GitHub
-- develop a fundamental part of the project to the stage when is ready for deployment to the hosting platform
-- log in to Heroku page and click "New' and then select 'Create New App'
-- give an app a unique name, using dashes instead of spaces, like entering 'ecobiketech' in the input field 'App name'  
-- select the region free to use and closest to my location 'Europe' and click 'Create App'
-- head to 'Resources' tab and type in Postgres in the Add-ons search bar
-- select Heroku Postgres and provision a Hobby Dev-Free database
-- back to GitPod and install by typing `pip3 install dj_database_url` and `pip3 install psycopg2-binary`
-- freeze requirements to the txt file by typing `pip3 freeze > requirements.txt` in the terminal which informs Heroku what dependencies are required
-- store database setup by `import dj_database_url` in settings.py
-- retrieve the Database URL from the hidden Config Vars in Heroku
-- paste the Database URL in the database path in settings.py and remove the local settings
-- to save that in terminal, run migrations to build the database in Postgres by typing `python3 manage.py migrate`
-- to import data load JSON files for Categories and Products by typing `python3 manage.py loaddata categories` and `python3 manage.py loaddata products`, in that specific order
-- create a superuser by typing `python3 manage.py createsuperuser` and follow the instructions shown in the terminal
-- remove the Postgres Database URL from settings.py so it will not end up in version control, and commit changes
-- install sort of webserver by typing `pip3 install gunicorn` and freeze that to the requirements.txt file
-- create a Procfile and type `web: gunicorn easy-skincare.wsgi:application` to the file, make sure there is no extra line after the first line as this can confuse host Heroku
-- log in to Heroku by typing `heroku login -i`
-- type `heroku config:set DISABLE_COLLECTSTATIC=1` (in my case also in the end add `--app easy-skincare`) in the terminal to stop Heroku from collecting the static files
-- allow Host in settings.py by inserting heroku app name and localhost
-- add, commit and push all changes to GitHub
-- type `git push heroku main` to push everything to Heroku and check if the app was deployed successfully (pray at that moment)
-- set to automatic deploy in Heroku, select 'Deploy' tab from the Heroku App menu and select 'GitHub' from the 'Deployment method' section of the page
-- ensure that GitHub profile name was showing properly and search for repo name in the input 'Search' field
-- once the repo is found, click 'Connect' to complete that action and 'Enable Automatic Deploys' every time code is pushed to GitHub it will end up in Heroku as well
-- set up a secret key, select 'Settings' from the Heroku App menu, select 'Reveal Config Vars' and insert the relevant key/value information
-- back to the settings.py and replace the secret key with the call to get it from the environment `SECRET_KEY = os.environ.get("SECRET_KEY", "")`
-- make sure that during development proccess all necessary settings (key and value) for config variables are included:
-    - `AWS_ACCESS_KEY_ID =	<value here>`
-    - `AWS_SECRET_ACCESS_KEY =	<value here>`
-    - `DATABASE_URL =	<value here>`
-    - `DISABLE_COLLECTSTATIC =	1 <will be removed later on>` 
-    - `EMAIL_HOST_PASS = <value here>`
-    - `EMAIL_HOST_USER = <value here>`
-    - `SECRET_KEY = <value here>`
-    - `STRIPE_PUBLIC_KEY = <value here>`
-    - `STRIPE_SECRET_KEY = <value here>`
-    - `STRIPE_WH_SECRET = <value here>`
-    - `USE_AWS = True`
-
-> Deployment steps to the Amazon Web Services cloud-base storage consist of:
-
-- create an Amazon AWS account, please take into consideration that authorization can take some days according to current standard procedures 
-- once your account exist and you are logged in, go to AWS Management Console and search for **S3 - Simple Storage Service**, and then create a new bucket, select the region, allow public access to the files, and approve
-- under the 'Properties' tab turn on 'Static website hosting', then enable host website and add index.html and error.html, and save
-- under the 'Permissions' tab paste CORS configuration, like so:
-```
-[
-  {
-      "AllowedHeaders": [
-          "Authorization"
-      ],
-      "AllowedMethods": [
-          "GET"
-      ],
-      "AllowedOrigins": [
-          "*"
-      ],
-      "ExposeHeaders": []
-  }
-]
-```
-- under the 'Permissions' tab go to 'Bucket Policy' and select 'Policy generator' to create security for this bucket, chose 'S3 Bucket Policy' as Select Type of Policy, enter '*' for Principal, select Actions as 'GetObject', Enter 'ARN' created earlier in 'Bucket Policy'
-approve by 'Add Statement' and then 'Generate Policy'
-- copy whole Policy JSON file and paste it into the 'Bucket Policy', add '/*' at the end of Resources line and save changes
-- under the 'Access Control List' tab set the 'List objects' permission for 'Everyone' and save
-
-
-- with S3 Bucket ready create a user to access it, go back to AWS Management Console and search for **IAM - Identity and Access Management**
-- from the IAM dashboard select 'User Groups', then create a new group by giving it a name, continue to click through and finally 'Create Group'
-select 'Policies' and then create a policy
-- under JSON tab click 'Import managed policy' and from a list provided choose AmazonS3FullAccess
-- edit the resource with 'Bucket ARN' created earlier when making 'Bucket Policy' and paste that in this JSON file 
-- click next step and go to 'Review policy', give the policy a name and description of your choice, and approve by 'Create policy'
-- come back to User Groups and choose the group created earlier
-- under the 'Permissions' click 'Add permissions', search for a created policy, and choose 'Attach Policy'
-- finally under the 'Users' page click 'Add user', give it a user name, select 'Programmatic access' as the Access type and click 'Next Permissions'
-- add the user to the Group just created by clicking 'Next' and 'Create User'
-- download and save the .csv file containing the access key and secret access key for authentication, mark that this one is available once and can not be downland later on
-
-> Connecting Django to AWS S3 consist of:
-
-- to achieve that in terminal install boto3 and django-storages by typing `pip3 install boto3` and `pip3 install django-storages`
-- next freeze those to the requirements file by typing `pip3 freeze > requirements.txt` so they can install and add 'storages' to installed apps 
-- add an if statement in your settings.py to give a message for a place of storing those sensitive pieces of information  
-- add the values from the .csv file to Heroku 'Config Vars' under Settings and remove the DISABLE_COLLECTSTATIC variable from a selection of variables
-- create a custom_storages.py file and import django settings from django conf, and s3boto3 storages, add static storage class and media storage class, finally add information about those location settings in setting.py, add changes, commit them and push to trigger an automatic deployment to Heroku, check the Build Log if all of the files was build successfully 
-- with S3 bucket set up, under the automatically created static folder, create a new folder called media and inside upload by clicking 'Add Files' all media files to it from the folder collection with product images, and other images used through the site
-- then click 'Next' and under 'Manage public permissions' select 'Grant public read access' to make sure that all static and media files are publically accessible and click 'Upload'
-
-> Local hosting by creating a clone consist of:
-
-- navigate to my GitHub repo
-- click the Code button next to the Green Gitpod button 
-- choose either to download the zip file or clone the repo using GH https://github.com/ictwise/notpp4 repo clone in the terminal 
-- install the modules listed in the requirements.txt file by typing `python3 -m pip -r requirements.txt` in the terminal
-- install the JSON files using `python3 manage.py loaddata categories`, and `python3 manage.py loaddata products`, in this order
-- create a SuperUser by using `python3 manage.py createsuperuser` and follow further instructions
-- run migrations to create a database by using `python3 manage.py migrate`
-- create an env.py file in your application folder and add the following:
-```
-import os
-os.environ.setdefault("SECRET_KEY", "value here")
-os.environ.setdefault("STRIPE_PUBLIC_KEY","value here",)
-os.environ.setdefault("STRIPE_SECRET_KEY","value here",)
-os.environ.setdefault("STRIPE_WH_SECRET", "value here")
-os.environ.setdefault("EMAIL_HOST_PASS", "value here")
-os.environ.setdefault("EMAIL_HOST_USER", "value here")
-````
-- the app can now be run locally by typing `python3 manage.py runserver` in the terminal
-
-# 9. Credits
-
-> Content
-
-The text content for this page was created by the site owner of ecobiketech.com **with their permission**, but this site is for **educational purposes only**. 
-> Media
-
-
-
-> Code
-- The code for the entire project was heavily influenced by the Walkthrough Project, created by Code Institute, called Boutique Ado. Key components and code snippets were borrowed from this project as a starting point.
-- Code inspiration for the Blog  borrowed and adapted from the tutorial - [**Build a Blog**](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
-
-
-# 10. Acknowledgments
-
-- Inspiration for this project was the walkthrough full e-commerce project "Boutique Ado" created by CI
-- I want to extend my gratitude to the entire Code Institute assessment team, as well as the tutors, for providing engaging course content and a well-structured learning process. I am also thankful for the student care team, who were always kind and helpful, and the student Slack community, especially its active students and leaders, who created a supportive and collaborative environment. Lastly, I want to acknowledge my mentor, Chris Quinn , for his guidance, patience, and dedication during the development process.
-
-- I am grateful for this experience, which at times, I never thought I could complete. I appreciate everything that has been done to help make this journey a success.
+**deployment steos :** ---> please click [**HERE**](static/docs/DEPLOYMENT.md)
 

@@ -22,91 +22,104 @@ The project was developed using [GitPod](https://gitpod.io/) and pushed to [GitH
 Deployment
 
 ### **Setting up Database**
-Create an ElephantSQL account
-Log in to ElephantSQL.com to access your dashboard
-Click “Create New Instance”
-Set up your plan
-•	Give your plan a Name (this is commonly the name of the project)
-•	Select the Tiny Turtle (Free) plan
-•	You can leave the Tags field blank
-Select “Select Region”
-Select a data center near you
-click “Create instance”
-Log into Heroku
-Click New to create a new app
-Give your app a name and select the region closest to you. When you’re done, click Create app to confirm
-Open the Settings tab
-Add the config var DATABASE_URL, and for the value, copy in your database url from ElephantSQL.
-Open up your Gitpod tab
-In the terminal, install dj_database_url and psycopg2
-pip3 install dj_database_url==0.5.0 psycopg2
-Update your requirements.txt
-pip freeze > requirements.txt
-In your settings.py file, import dj_database_url underneath the import for os
+1. Create an ElephantSQL account
+2. Log in to ElephantSQL.com to access your dashboard
+3. Click “Create New Instance”
+4. Set up your plan
+    -   Give your plan a Name (this is commonly the name of the project)
+    -   Select the Tiny Turtle (Free) plan
+    -   You can leave the Tags field blank
+5. Select “Select Region”
+6. Select a data center near you
+7. click “Create instance”
+8. Log into Heroku
+9. Click New to create a new app
+10. Give your app a name and select the region closest to you. When you’re done, click Create app to confirm
+11. Open the Settings tab
+12. Add the config var DATABASE_URL, and for the value, copy in your database url from ElephantSQL.
+13. Open up your Gitpod tab
+    -  In the terminal, install dj_database_url and psycopg2
+    -  pip3 install dj_database_url==0.5.0 psycopg2
+    -  Update your requirements.txt
+    -  pip freeze > requirements.txt
+14. In your settings.py file, import dj_database_url underneath the import for os
 import os
  import dj_database_url
 
-Scroll to the DATABASES section and update it to the following code, so that the original connection to sqlite3 is commented out and we connect to the new ElephantSQL database instead. Paste in your ElephantSQL database URL in the position indicated
-
-# DATABASES = {
- #     'default': {
- #         'ENGINE': 'django.db.backends.sqlite3',
- #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
- #     }
- # }
-     
- DATABASES = {
-     'default': dj_database_url.parse('your-database-url-here')
- }
-
-In the terminal, run the showmigrations command to confirm you are connected to the external database
-python3 manage.py showmigrations
-
-Migrate your database models to your new database
-
- python3 manage.py migrate
-
-Create a superuser for your new database
-
-python3 manage.py createsuperuser
-
-login to your app admin, go to categories and create the categories of repair and service.
-You might want to add some Products but there will be opportunity to create these later through the add_product page.
-Finally, to prevent exposing our database when we push to GitHub, we will delete it again from our settings.py
-For now, your DATABASE setting in the settings.py file should look like this
+15. Scroll to the DATABASES section and update it to the following code, so that the original connection to sqlite3 is commented out and we connect to the new ElephantSQL database instead. Paste in your ElephantSQL database URL in the position indicated
+```python
 
  DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.sqlite3',
          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
      }
+  }
+     
+ DATABASES = {
+     'default': dj_database_url.parse('your-database-url-here')
  }
+ ```
 
-Confirm that the data in your database on ElephantSQL has been created
+16. In the terminal, run the showmigrations command to confirm you are connected to the external database
+python3 manage.py showmigrations
+
+17. Migrate your database models to your new database
+
+     -  python3 manage.py migrate
+
+18. Create a superuser for your new database
+
+    -  python3 manage.py createsuperuser
+
+19. login to your app admin, go to categories and create the categories of repair and service.
+You might want to add some Products but there will be opportunity to create these later through the add_product page.
+20. Finally, to prevent exposing the database when we push to GitHub, we will delete it again from our settings.py
+For now, your DATABASE setting in the settings.py file should look like this
+```python
+ DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
+ }
+ 
+ ```
+
+21. Confirm that the data in your database on ElephantSQL has been created
 On the ElephantSQL page for your database, in the left side navigation, select “BROWSER”
 
-Click the Table queries button, select auth_user(public)
+22. Click the Table queries button, select auth_user(public)
 
-When you click “Execute”, you should see your newly created superuser details displayed. This confirms your tables have been created and you can add data to your database
+23. Click “Execute”, you should see your newly created superuser details displayed. This confirms your tables have been created and you can add data to your database
 
-To prevent 500 errors during login on a deployed site you need to make a one line addition to your settings file.
+    -  To prevent 500 errors during login on a deployed site you need to make a one line addition to your settings file.
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-#### **Connecting to Heroku**Install gunicorn
-Pip3 install gunicorn
-Pip3 freeze > requirements.txt
-Create a Procfile
-web: gunicorn ecobiketech.wsgi:application (ensure there are no empty spaces or blank lines)
-disable collectstatic.
-By using Heroku config:set  DISABLE_COLLECTSTATIC = 1 –app
-add the hostname of our Heroku app and local host to ALLOWED_HOSTS in settings.py
-ALLOWED_HOSTS =[‘ecobiketech’, ‘localhost’]
-Commit changes to GitHub using *git add .*, *git commit -m <commit message>*, *git push*.
-Then deploy to Heroku using *git push heroku main*
-If the git remote isn't initialised you may have to do that first by running *heroku git:remote -a <heroku-app-name>
-From Heroku dashboard click "Deploy" -> "Deployment Method" and select "GitHub"
-Search for your GitHub repo and connect then Enable Automatic Deploys.
-Generate secret key. Strong secret keys can be obtained from [MiniWebTool](https://miniwebtool.com/django-secret-key-generator/). This automatically generates a secret key 50 characters long with alphanumeric characters and symbols.
-Add secret key to GitPod variables and Heroku config vars
+#### **Connecting to Heroku**
+
+1. Install gunicorn
+    -  Pip3 install gunicorn
+    -  Pip3 freeze > requirements.txt
+2. Create a Procfile
+    -  web: gunicorn ecobiketech.wsgi:application (ensure there are no empty spaces or blank lines)
+3. Disable collectstatic.
+    -  By using Heroku config:set  DISABLE_COLLECTSTATIC = 1 –app
+4. Add the hostname of our Heroku app and local host to ALLOWED_HOSTS in 
+settings.py
+```python
+    ALLOWED_HOSTS =[‘ecobiketech’, ‘localhost’]
+```
+
+5. Commit changes to GitHub using 
+```python
+*git add .*, *git commit -m <commit message>*, *git push*.
+```
+6. Deploy to Heroku using *git push heroku main*
+    -  If the git remote isn't initialised you may have to do that first by running *heroku git:remote -a <heroku-app-name>
+7. From Heroku dashboard click "Deploy" -> "Deployment Method" and select "GitHub"
+8. Search for your GitHub repo and connect then Enable Automatic Deploys.
+9. Generate secret key. Strong secret keys can be obtained from [MiniWebTool](https://miniwebtool.com/django-secret-key-generator/). This automatically generates a secret key 50 characters long with alphanumeric characters and symbols.
+10. Add secret key to GitPod variables and Heroku config vars
 
 #### **Amazon AWS**
 
