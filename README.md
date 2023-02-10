@@ -215,7 +215,6 @@ The website has been designed with the user experience in mind, making it easy a
 
 - **Profile Page** - The user profile includes pre-filled information such as name, county, postcode, street, and a complete history of orders. Users can view previous orders and update their personal and delivery information. Only authenticated users have access to this feature. !![screen](static/docs/images/profile.png)
 
-<img src="docs/pictures/features/profile_feature.jpg" style="margin: 0;">
 
 - **Shopping Bag** - The Shopping Bag page is optimized for all devices and displays a product's picture, name, and total cost. Users can adjust the quantity of products in their bag or remove items entirely with the update or delete links. ![screen](static/docs/images/bag.png)
 

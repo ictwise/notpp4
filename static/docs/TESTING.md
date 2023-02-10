@@ -110,17 +110,13 @@ HTML validator was used for all pages and only one minor warning about the use o
 
 #### **CSS Jigsaw**
 CSS Jigsaw validation passed for all pages
-- [checkout.css]![screen](./images/jigsaw-product-css.png)
+- [checkout.css]![screen](./images/jigsaw-checkout_css.png)
 
-- [base.css]![screen](./images/jigsaw-base-css.png)
+- [base.css]![screen](./images/jigsaw-base_css.png)
 
 #### **JSHint**
 JavaScript JSHint validator passed for all pages
-- [base.js]![screen](static/docs/images/validation/jshint-base-js.png)
-- [back-to-top.js]![screen](static/docs/images/validation/jshint-back-to-top-js.png)
-- [modal.js]![screen](static/docs/images/validation/jshint-modal-js.png)
-- [sort-selector.js]![screen](static/docs/images/validation/jshint-sort-selector-js.png)
-- [uni-form-validation.jquery.js]![screen](static/docs/images/validation/jshint-uni-form-validation-jquery-js.png)
+- [base.js]![screen](./images/jshint_stripe_elements.png)
 
 #### **PEP8**
 
