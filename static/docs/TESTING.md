@@ -109,18 +109,18 @@ HTML validator was used for all pages and only one minor warning about the use o
 - [Edit Product]![screen](./images/edit-product_validator_result.png)
 
 #### **CSS Jigsaw**
-CSS Jigsaw validation passed for all pages
+CSS Jigsaw validation passed for all pages tested
 - [checkout.css]![screen](./images/jigsaw-checkout_css.png)
 
 - [base.css]![screen](./images/jigsaw-base_css.png)
 
 #### **JSHint**
-JavaScript JSHint validator passed for all pages
+JavaScript JSHint validator passed for all pages tested
 - [base.js]![screen](./images/jshint_stripe_elements.png)
 
 #### **PEP8**
 
-No errors
+Using flake8 - No errors
 
 [Back to contents](#contents)
  

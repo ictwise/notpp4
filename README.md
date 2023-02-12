@@ -227,6 +227,7 @@ The website has been designed with the user experience in mind, making it easy a
 
 
 
+
 # Technologies 
 * [**Code Institute Fullstack Web Developer Course Content**](https://codeinstitute.net/) - was used as the main source of fundamental knowledge and inspiration.
 * [**Code Institute SLACK” Community**](https://slack.com/intl/en-no/) - was used as a source of assistance.
@@ -270,6 +271,8 @@ The website has been designed with the user experience in mind, making it easy a
 
 The final result of this project is a full-stack, front-end and back-end web application based on the principles of user experience design, accessibility, and functionality. 
 **This is an interactive front-end and back-end web application developed and implemented by using HTML, CSS, JavaScript, Python+Django, with additional Bootstrap elements**, testing was performed based on the website's functionality for obtaining and saving data, visual impacts, layout, and user interactions during navigation and purchasing products.
+
+- An aspect I recognise needing improvement is my git commit message practices. Initially, I made thoughtful and descriptive commit messages at relevant stages of the project. However, as I progressed to more challenging tasks and adopted a trial-and-error approach, my commits have become more frequent with less informative messages, partly this was due to the pressure of learning as I was creating; the deadline and that it is an assessed peice of work.
 
 **Testing results :** ---> please click [**HERE**](static/docs/TESTING.md)
 

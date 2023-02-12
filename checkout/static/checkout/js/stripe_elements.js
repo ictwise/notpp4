@@ -4,6 +4,8 @@
 
     CSS from here: 
     https://stripe.com/docs/stripe-js
+
+    boutique Ado from the Code institute walkthrough 
 */
 
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);

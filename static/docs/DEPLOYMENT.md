@@ -192,10 +192,10 @@ To find the values of each key:
 - STRIPE_PUBLIC_KEY: Retrived from Stripe Dashboard in the Developer's API section (Publishable key).
 - STRIPE_SECRET_KEY: Retrived from Stripe Dashboard in the Developer's API section (Secret key)
 - STRIPE_WH_SECRET: Retrived from Stripe Dashboard in the Developer's after creating an endpoint for your webhook (Signing secret).
-- EMAIL_HOST_USER: Your email address or username. [See below for instructions](#smtp-setup).
-- EMAIL_HOST_PASS: Your passcode from your email client. [See below for instructions](#smtp-setup).
-- AWS_SECRET_ACCESS_KEY: From the CSV file that you download having created a User in Amazon AWS S3. [See below for instructions](#amazon-aws).
-- AWS_ACCESS_KEY_ID: From the CSV file that you download having created a User in Amazon AWS S3. [See below for instructions](#amazon-aws).
+- EMAIL_HOST_USER: Your email address or username. 
+- EMAIL_HOST_PASS: Your passcode from your email client. 
+- AWS_SECRET_ACCESS_KEY: From the CSV file that you download having created a User in Amazon AWS S3.
+- AWS_ACCESS_KEY_ID: From the CSV file that you download having created a User in Amazon AWS S3. 
 
 
 ### How to contribute to the site
